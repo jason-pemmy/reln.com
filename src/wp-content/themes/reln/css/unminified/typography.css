@@ -5,10 +5,6 @@ a:not([class]) {
   color: #3bb0c9;
   text-decoration: none;
 }
-a:not([class]):hover,
-a:not([class]):focus {
-  text-decoration: underline;
-}
 h1,
 h2,
 h3,
@@ -17,28 +13,23 @@ h5,
 h6,
 p {
   margin-top: 0;
-  margin-bottom: 50px;
 }
-h1 {
-  font-family: "freight-display-pro", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.200em;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  color: #000;
-}
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.998em;
-  }
-}
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 3.998em;
-  }
-}
+/*h1 {
+	#freight .semi;
+	font-size: 2.200em;
+	line-height: 1;
+	.letter-spacing(-25);
+	text-transform: uppercase;
+	color: @black;
+
+	@media @mq-sm-min {
+		font-size: 2.998em;
+	}
+
+	@media @mq-md-min {
+		font-size: 3.998em;
+	}
+}*/
 h2 {
   font-family: "freight-display-pro", sans-serif;
   font-style: normal;

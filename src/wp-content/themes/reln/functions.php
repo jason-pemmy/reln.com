@@ -70,6 +70,8 @@ class The_Theme extends TBK_Theme {
 
 		add_action( 'init', array( &$this, 'config_custom_posts' ), 5 );
 		add_action( 'wp_head', array( &$this, 'add_ie_html5_shim' ) );
+		add_action( 'wp_print_scripts', array( &$this, 'enqueue_scripts' ) );
+		add_action( 'wp_print_styles', array( &$this, 'enqueue_styles' ) );
 
 		add_filter( 'show_admin_bar', '__return_false' );
 		add_filter( 'body_class', array( &$this, 'custom_body_class' ) );
@@ -81,9 +83,29 @@ class The_Theme extends TBK_Theme {
 		self::create_image_sizes( 'desktop-sm', 992, 9999, true );
 		self::create_image_sizes( 'tablet', 768, 500, true );
 		self::create_image_sizes( 'mobile-lg', 500, 300, true );
+		self::create_image_sizes( 'product-feature-image', 500, 300, true );
 		self::create_image_sizes( 'mobile-sm', 380, 300, true );
+		self::create_image_sizes( 'sponsor-logo', 323, 162, true );
 
 	}
+		
+	public function enqueue_scripts() {
+		$js_directory = self::get_stylesheet_dir() . '/js/';
+
+		if ( ! is_admin() ) {		
+			wp_enqueue_script( 'tbk-bootstrap-js', $js_directory . 'vendor/bootstrap.min.js' );
+			wp_enqueue_script( 'typekit', '//use.typekit.net/ynv5tpe.js' );
+			wp_enqueue_script( 'modernizr', $js_directory . 'vendor/modernizr.js' );
+			wp_enqueue_script( 'main-scripts', $js_directory . 'scripts.js' );			
+		}
+
+		wp_localize_script( 'main-scripts', 'baseURL', home_url() );
+	}
+	
+	public function enqueue_styles() {
+		
+	}
+	
 
 	function get_stylesheet_dir( $key = 'url' ) {
 		return esc_url( get_stylesheet_directory_uri() );
@@ -158,6 +180,9 @@ class The_Theme extends TBK_Theme {
 	}
 
 	public static function get_templatera( $slug ) {
+		if ( is_404() ) {
+			return false;
+		}
 		$template = get_page_by_path( $slug, OBJECT, 'templatera' );
 		if ( ! empty( $template ) ) {
 			return do_shortcode( $template->post_content );
@@ -165,7 +190,6 @@ class The_Theme extends TBK_Theme {
 
 		return false;
 	}
-
 }
 
 The_Theme::get_instance();

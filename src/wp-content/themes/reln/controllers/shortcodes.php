@@ -1,6 +1,5 @@
 <?php
 class TBK_Shortcodes extends Base_Factory {
-
 	function __construct() {
 		if ( function_exists( 'vc_map' ) ) {
 			$this->custom_bake();
@@ -9,9 +8,7 @@ class TBK_Shortcodes extends Base_Factory {
 		}
 		add_action( 'after_setup_theme', array( &$this, 'setup_shortcodes' ), 100 );
 	}
-
 	public function setup_shortcodes() {
-
 		$this->register( 'hours', false );
 		$this->register( 'phone', false );
 		$this->register( 'email', false );
@@ -19,7 +16,8 @@ class TBK_Shortcodes extends Base_Factory {
 		$this->register( 'hero-banner', false );
 		$this->register( 'form-sample', false );
 		$this->register( 'frontend-tool', false );
-
+		$this->register( 'security-monitor-navbar', true );
+		$this->register( 'security-monitor-content-list', true );
 		//styling elements
 		$this->register( 'style-guide', array(
 			'category' => 'tbk styles',
@@ -28,7 +26,6 @@ class TBK_Shortcodes extends Base_Factory {
 			'name' => 'wptest.io Formatting',
 			'category' => 'tbk styles',
 		) );
-
 		$button_params = array(
 			array(
 				'type' => 'vc_link',
@@ -46,7 +43,6 @@ class TBK_Shortcodes extends Base_Factory {
 				'description' => 'Text on the button.',
 			),
 		);
-
 		$this->register( 'image-bar', array(
 			'show_settings_on_create' => true,
 			'params' => array(
@@ -57,7 +53,6 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 			),
 		) );
-
 		$this->register( 'button', array(
 			'name' => 'Button',
 			'base' => 'button',
@@ -81,7 +76,23 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 			) ),
 		) );
-
+        
+        $this->register( 'product-feature', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+			),
+		) );
+        
 		$this->register( 'basic-container', array(
 			'name' => 'Basic Container',
 			'base' => 'basic_container',
@@ -98,7 +109,7 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 			'js_view' => 'VcColumnView',
 		) );
-
+        
 		$this->register( 'basic-container-narrow', array(
 			'name' => 'Basic Container (Narrow)',
 			'base' => 'basic_container_narrow',
@@ -115,8 +126,24 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 			'js_view' => 'VcColumnView',
 		) );
+        
+        $this->register( 'features-container', array(
+			'name' => 'Features Container',
+			'base' => 'features_container',
+			'as_parent' => array( 'only' => 'product-feature' ),
+			'is_container' => true,
+			'content_element' => true,
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+			),
+			'js_view' => 'VcColumnView',
+		) );        
 	}
-
 	public function register( $tag, $vc_map = array() ) {
 		add_shortcode( $tag, array( &$this, strtolower( str_replace( '-', '_', $tag ) ) ) );
 		if ( function_exists( 'vc_map' ) && false !== $vc_map ) {
@@ -139,12 +166,10 @@ class TBK_Shortcodes extends Base_Factory {
 			vc_map( $vc_map );
 		}
 	}
-
 	function custom_bake() {
 		//customize existing vc elements
 		vc_remove_element( 'vc_button' );
 	}
-
 	function hero_banner( $atts ) {
 		$atts = shortcode_atts( array(
 				'parallax' => false,
@@ -153,62 +178,46 @@ class TBK_Shortcodes extends Base_Factory {
 		if ( empty( $atts['title'] ) ) {
 			$atts['title'] = get_the_title();
 		}
-
 		$related = get_query_var( 'related' );
-
 		$post_id = is_archive() ? - 1 : get_the_ID();
 		$hide = get_field('hide_hero_banner', $post_id);
 		if($hide) {
 			return;
 		}
 		$thumb_id = The_Theme::get_post_thumbnail_id( ( ! empty( $related ) ? $related->ID : $post_id ) );
-
 		$src = The_Theme::responsive_bg( $thumb_id, 'hero-banner' );
 		$atts['banner_attr'] = $src;
-
 		return TBK_Render::shortcode_view( 'hero-banner', apply_filters( 'hero_banner', $atts ) );
 	}
-
 	function phone() {
 		$phone = get_field( 'phone', 'options' );
-
 		return '<a href="tel:' . $phone . '">' . $phone . '</a>';
 	}
-
 	function email() {
 		$email = get_field( 'email', 'options' );
-
 		return '<a href="' . antispambot( $email, 1 ) . '">' . antispambot( $email ) . '</a>';
 	}
-
 	function address() {
 		return wpautop( get_field( 'address', 'options' ) );
 	}
-
 	function twitter() {
 		return get_field( 'twitter', 'options' );
 	}
-
 	function facebook() {
 		return get_field( 'facebook', 'options' );
 	}
-
 	function youtube() {
 		return get_field( 'youtube', 'options' );
 	}
-
 	function hours() {
 		return wpautop( get_field( 'hours', 'options' ) );
 	}
-
 	function style_guide() {
 		return TBK_Render::shortcode_view( 'style-guide' );
 	}
-
 	function wptest_io() {
 		return TBK_Render::shortcode_view( 'wptest-io.php' );
 	}
-
 	function button( $atts ) {
 		$atts = shortcode_atts( array(
 			'color' => 'blue',
@@ -219,41 +228,51 @@ class TBK_Shortcodes extends Base_Factory {
 		if( ! empty($atts['link'])) {
 			$atts['link'] = vc_build_link( $atts['link'] );
 		}
-
 		return TBK_Render::shortcode_view( 'button', $atts );
 	}
-
 	function image_bar( $atts ) {
 		$atts = shortcode_atts( array(
 			'images' => null,
 		), $atts );
-
 		if ( ! empty( $atts['images'] ) ) {
 			$atts['images'] = explode( ',', $atts['images'] );
-
 			return TBK_Render::shortcode_view( 'images-bar', $atts );
 		}
-
 		return false;
 	}
-
+    
+    
+    
 	function frontend_tool() {
 		return TBK_Render::shortcode_view( 'frontend-tool' );
 	}
+    
+    function product_feature( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,
+			'copy' => null,
+		), $atts );
+
+		if ( ! empty( $atts['copy'] ) ) {
+			//$atts['copy'] = vc_build_link( $atts['copy'] );
+		}
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-feature' );
+		}
+
+		return TBK_Render::shortcode_view( 'product-feature', $atts );
+	}
 }
-
 TBK_Shortcodes::instantiate();
-
 function encode_array_for_sc( $array ) {
 	return urlencode( serialize( $array ) );
 }
-
 function decode_array_for_sc( $array ) {
 	return unserialize( urldecode( $array ) );
 }
 
 if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
-
 	class TBKBakeryContainer extends WPBakeryShortCodesContainer {
 		protected function content( $atts, $content = null, $view = null ) {
 			extract( $atts );
@@ -263,13 +282,11 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 				include( locate_template( 'views/shortcodes/' . $view . '.php' ) );
 				$output = ob_get_clean();
 				$output = str_replace( '{content}', wpb_js_remove_wpautop( $content ), $output );
-				$output = $this->startRow( $el_position ) . $output . $this->endRow( $el_position );
+				//$output = $this->startRow( $el_position ) . $output . $this->endRow( $el_position );
 			}
-
 			return $output;
 		}
 	}
-
 	/**
 	 * Class WPBakeryShortCode_Basic_Container : A basic VC Container for containing things within
 	 * a bootstrap .container.
@@ -279,11 +296,9 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 			$atts = shortcode_atts( array(
 				'classes' => null,
 			), $atts );
-
 			return parent::content( $atts, $content, $view );
 		}
 	}
-
 	/**
 	 * Class WPBakeryShortCode_Basic_Container_Narrow : A basic VC Container for containing things within
 	 * a bootstrap .container but narrower.
@@ -293,7 +308,15 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 			$atts = shortcode_atts( array(
 				'classes' => null,
 			), $atts );
-
+			return parent::content( $atts, $content, $view );
+		}
+	}
+    
+	class WPBakeryShortCode_Features_Container extends TBKBakeryContainer {
+		protected function content( $atts = null, $content = null, $view = 'features-container' ) {
+			$atts = shortcode_atts( array(
+				'classes' => null,
+			), $atts );
 			return parent::content( $atts, $content, $view );
 		}
 	}

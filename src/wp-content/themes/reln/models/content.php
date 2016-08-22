@@ -104,12 +104,6 @@ class Content_Model extends Base_Factory {
 		return $wpdb->get_results( $query );
 	}
 
-
-	/**
-	 * This will return all post titles of the posts passed in.
-	 * @param $posts
-	 * @return array|mixed
-	 */
 	function get_post_titles_only( $posts ) {
 		$return = array();
 		$singular = false;
@@ -150,11 +144,6 @@ class Content_Model extends Base_Factory {
 		return $return;
 	}
 
-	/**
-	 * @param $phone
-	 * This strips out all periods, dashes etc to use for <a href="tel:..."
-	 * @return string
-	 */
 	function phone_href( $phone ) {
 		$ext = '';
 		//if it has an extension, lets set this up
@@ -267,7 +256,7 @@ class Content_Model extends Base_Factory {
 	}
 
 	function tbk_excerpt($content, $length = 55, $read_more = '...', $highlight = false, $allowed_tags = '') {
-		return The_Theme::trim_excerpt(strip_tags(html_entity_decode(do_shortcode($content)), $allowed_tags), $length, $read_more, $highlight);
+		return The_Theme::trim_excerpt(strip_tags(do_shortcode($content), $allowed_tags), $length, $read_more, $highlight);
 	}
 
 	public static function setup_meta_query_like($value, $meta_key) {

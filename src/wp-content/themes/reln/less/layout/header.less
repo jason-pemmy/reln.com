@@ -1,1 +1,40 @@
-@import '../utils/utils.less';
+.navbar-inverse {
+	background-color: #fff;
+	border-color: #fff; 
+	
+	.navbar-brand {
+		float: left;
+		color: #3bb0c9;
+
+		&:hover,&:focus {
+			color: mediumvioletred;
+		}
+	}
+	
+	.navbar-nav > li > a {
+		color: #3bb0c9;
+		
+		&:hover,&:focus {
+			color: mediumvioletred;
+		}
+	}	
+	
+	.navbar-toggle {
+		border-color: #fff;		
+		
+		.icon-bar {
+			background-color: #3bb0c9;						
+		}
+		
+		&:hover,&:focus {
+            background-color: beige;
+			.icon-bar {
+				background-color: mediumvioletred;							
+			}				
+		}        
+	}
+	
+	.navbar-collapse {
+		//background-color: #467879;
+	}
+}

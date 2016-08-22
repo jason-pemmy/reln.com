@@ -31,7 +31,7 @@ class Theme_Enqueues extends Base_Factory {
 		if ( ! is_admin() ) {
 			$theme_base = self::get_stylesheet_dir();
 
-			if ( 'dev' == TBK_ENVIRONMENT || 1 == 1 ) { // todo: remove 1 == 1 when approaching QA
+			if ( 'dev' == TBK_ENVIRONMENT ) {
 				$css_directory = $theme_base . '/css/unminified/';
 
 				// vendors - all 3rd party styles come first
@@ -61,11 +61,13 @@ class Theme_Enqueues extends Base_Factory {
 					'mobile-menu',
 					'gravity-forms',
 					'forms',
+					'home-page',
 				) );
-
+				
 				// components
-				Theme_Enqueues::iterate_enqueue( array(
-				) );
+				Theme_Enqueues::iterate_enqueue(array(
+					'navbar-toggle',					
+				));
 
 				// pages
 				Theme_Enqueues::iterate_enqueue( array(
@@ -103,7 +105,14 @@ class Theme_Enqueues extends Base_Factory {
 		if ( ! is_admin() ) {
 			// all pages - 3rd party
 			wp_enqueue_script( 'jquery' );
-			//wp_enqueue_script( 'columnizer', $js_directory . '.js', array( 'jquery' ), false, true );
+			wp_enqueue_script( 'equalize', $js_directory . 'equalize.js', array( 'jquery' ), false, true );
+
+			// all pages - our stuff
+			wp_enqueue_script( 'shared-functions', $js_directory . 'shared-functions.js', array( 'jquery' ));
+			wp_register_script( 'main-scripts', $js_directory . 'scripts.js', array( 'jquery', 'shared-functions', 'equalize' ) );
+			wp_localize_script( 'main-scripts', 'baseURL', home_url() );
+			wp_enqueue_script( 'main-scripts' );
+			wp_enqueue_script( 'navigation', $js_directory . 'navigation.js', array( 'jquery', 'shared-functions' ));
 		}
 	}
 

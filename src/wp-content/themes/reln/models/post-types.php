@@ -1,6 +1,6 @@
 <?php
 
-class TBK_Post_Types extends Base_Factory {
+class TBK_Post_Types extends Base_Factory { //TODO rename to custom post type (plural)
 
 	static $post_type = '';
 

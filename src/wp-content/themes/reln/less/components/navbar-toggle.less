@@ -1,0 +1,107 @@
+@import '../utils/utils.less';
+
+.navbar-default {
+	.navbar-toggle {		
+		z-index: 1000;
+		width: 65px;
+		margin: 0;
+		padding-top: 20px;
+		text-align: center;
+		border: none;
+		border-radius: 0;
+		background: @green;
+		transition: all 0.5s ease;
+
+		p.btn-text {
+			margin-bottom: 0;
+			color: @cream-text;
+			#proxima-cond .bold;
+			font-size: 14px;
+			line-height:14px;
+			text-transform: uppercase;
+			transition: all 0.5s ease;
+		}
+
+		&:hover,
+		&:focus {
+			background: @green;
+
+			p.btn-text {
+				color: @yellow;
+			}
+
+			.hamburger-bar {
+				background: @yellow;
+				transition: all 0.5s ease;
+			}
+		}
+
+		.hamburger {
+			position: relative;
+			width: 23px;
+			height: 16px;
+			display: inline-block;
+		}
+
+		.hamburger-bar {
+			background: @cream-text;
+			.tbk-transform(rotate(0));
+			opacity: 1;
+			.size(100%, 2px);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transition: all 0.5s ease;
+
+			&:first-of-type {
+				top: 0;
+			}
+
+			&:nth-of-type(2) {
+				top: 50%;
+				margin-top: -1px;
+			}
+
+			&:last-of-type {
+				top: 100%;
+				margin-top: -2px;
+			}
+		}
+
+		@media @mq-sm-min {
+			display: block;
+		}
+
+		@media @mq-md-min {
+			display: block;
+		}
+	}
+
+	.navbar-toggle.collapsed {
+		.close-text {
+			display: none;
+		}
+	}
+
+	.navbar-toggle.close-button{
+		background: @white;
+		transition: background-color 0.5s ease;
+
+		.open-text {
+			display: none;
+		}
+
+		.icon, p {
+			color: @green;
+			transition: all 0.5s ease;
+		}
+
+		&:hover,
+		&:focus {
+			.icon, p {
+				color: @yellow;
+				transition: all 0.5s ease;
+			}
+		}
+	}
+}

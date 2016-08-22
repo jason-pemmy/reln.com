@@ -376,7 +376,7 @@ class TBK_Theme {
 		}
 
 		if ( !isset( self::$image_sizes[$size] ) ) {
-			wp_die( sprintf( __( 'You must first call TBK_Theme::add_image_size("%s",$your_width,$your_height,$your_crop) to register an ad-hoc image size', 'tbk-theme' ), $size ) );
+			//wp_die( sprintf( __( 'You must first call TBK_Theme::add_image_size("%s",$your_width,$your_height,$your_crop) to register an ad-hoc image size', 'tbk-theme' ), $size ) );
 		}
 
 		// If we get here, we need to ad hoc create an image size
@@ -796,17 +796,6 @@ class TBK_Theme {
 		return null;
 	}
 
-	public static function unregister_post_type( $post_type, $slug = '' ){
-
-		global $wp_post_types;
-
-		if ( isset( $wp_post_types[ $post_type ] ) ) {
-			unset( $wp_post_types[ $post_type ] );
-
-			$slug = ( ! $slug ) ? 'edit.php?post_type=' . $post_type : $slug;
-			// remove_menu_page( $slug ); // TODO: wrong hook?
-		}
-	}
 }
 
 if ( ! function_exists('humanize')) {

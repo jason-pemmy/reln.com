@@ -1,0 +1,98 @@
+.navbar-default .navbar-toggle {
+  z-index: 1000;
+  width: 65px;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  background: #077962;
+  transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle p.btn-text {
+  margin-bottom: 0;
+  color: #f8f6ee;
+  font-family: "proxima-nova-extra-condensed", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background: #077962;
+}
+.navbar-default .navbar-toggle:hover p.btn-text,
+.navbar-default .navbar-toggle:focus p.btn-text {
+  color: #fdb813;
+}
+.navbar-default .navbar-toggle:hover .hamburger-bar,
+.navbar-default .navbar-toggle:focus .hamburger-bar {
+  background: #fdb813;
+  transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle .hamburger {
+  position: relative;
+  width: 23px;
+  height: 16px;
+  display: inline-block;
+}
+.navbar-default .navbar-toggle .hamburger-bar {
+  background: #f8f6ee;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  opacity: 1;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle .hamburger-bar:first-of-type {
+  top: 0;
+}
+.navbar-default .navbar-toggle .hamburger-bar:nth-of-type(2) {
+  top: 50%;
+  margin-top: -1px;
+}
+.navbar-default .navbar-toggle .hamburger-bar:last-of-type {
+  top: 100%;
+  margin-top: -2px;
+}
+@media screen and (min-width: 768px) {
+  .navbar-default .navbar-toggle {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .navbar-toggle {
+    display: block;
+  }
+}
+.navbar-default .navbar-toggle.collapsed .close-text {
+  display: none;
+}
+.navbar-default .navbar-toggle.close-button {
+  background: #fff;
+  transition: background-color 0.5s ease;
+}
+.navbar-default .navbar-toggle.close-button .open-text {
+  display: none;
+}
+.navbar-default .navbar-toggle.close-button .icon,
+.navbar-default .navbar-toggle.close-button p {
+  color: #077962;
+  transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle.close-button:hover .icon,
+.navbar-default .navbar-toggle.close-button:focus .icon,
+.navbar-default .navbar-toggle.close-button:hover p,
+.navbar-default .navbar-toggle.close-button:focus p {
+  color: #fdb813;
+  transition: all 0.5s ease;
+}
