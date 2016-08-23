@@ -23,7 +23,6 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
 
 # OS generated files #
@@ -42,11 +41,11 @@ Thumbs.db
 *.avi
 *.mp3
 *.flv
+*.psd
 
 # uploads folder in wp #
 ########################
 __archives
-src/wp-content/uploads/
 src/wp-content/**/__uploads
 src/wp-content/**/__exports
 src/wp-content/brochure
