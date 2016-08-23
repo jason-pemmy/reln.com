@@ -23,7 +23,10 @@
 							<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"
 								 alt="<?php bloginfo('name');?>">
 						</a>
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-haspopup="true" aria-expanded="false">
+						<button data-toggle="collapse-side" 
+							data-target=".side-collapse" 
+							type="button" 
+							class="navbar-toggle collapsed">
 							<div class="open-text">
 								<span class="hamburger">
 									<span class="hamburger-bar"></span>
@@ -38,12 +41,12 @@
 							</div>
 						</button>
 					</div>
-					<div class="collapse navbar-collapse">
+					<div class="side-collapse in">
 						<?php
 							wp_nav_menu( array(
 								'container' => false,
 								'menu' => 'MainMenu',
-								'menu_class' => 'nav navbar-nav peanut-nav',
+								'menu_class' => 'nav navbar-nav reln-nav',
 								'menu_id' => 'main-menu',
 								'link_before' => '',
 								'link_after' => '',

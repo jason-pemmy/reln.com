@@ -16,12 +16,13 @@ function debug_message(message) {
 
 function toggle_slideout() {
 	var $ = jQuery;
-	var $body = $('body');
+	//var $body = $('body');
+	var $mobileMenu = $("#mobile-menu");
 	var $slideout = $('.slideout');
 	//var slideout_scroll = $slideout.getNiceScroll();
 
-	if ($body.hasClass('slideout-active')) {
-		$body.removeClass('slideout-active');
+	if ($mobileMenu.hasClass('slideout-active')) {
+		$mobileMenu.removeClass('slideout-active');
 		//document.activeElement.blur();
 
 		setTimeout(function() {
@@ -30,13 +31,13 @@ function toggle_slideout() {
 		}, 400);
 	} else {
 		$slideout.show(0, function() {
-			$body.addClass('slideout-active');
+			$mobileMenu.addClass('slideout-active');
 			setTimeout(function() {
 				$slideout.find('input').first().focus();
 			}, 200);
 
-			$body.click(function() {
-				if ($('body').hasClass('slideout-active')) {
+			$mobileMenu.click(function() {
+				if ($mobileMenu.hasClass('slideout-active')) {
 					toggle_slideout();
 				}
 			});

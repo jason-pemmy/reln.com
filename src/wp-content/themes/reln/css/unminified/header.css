@@ -1,33 +1,23 @@
-.navbar-inverse {
+.navbar-header {
   background-color: #fff;
   border-color: #fff;
 }
-.navbar-inverse .navbar-brand {
+.navbar-header .navbar-brand {
   float: left;
   color: #3bb0c9;
 }
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
+.navbar-header .navbar-brand:hover,
+.navbar-header .navbar-brand:focus {
   color: mediumvioletred;
 }
-.navbar-inverse .navbar-nav > li > a {
+.navbar-header .navbar-brand .logo {
+  max-width: 170px;
+  margin-top: 10px;
+}
+.navbar-header .navbar-nav > li > a {
   color: #3bb0c9;
 }
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
+.navbar-header .navbar-nav > li > a:hover,
+.navbar-header .navbar-nav > li > a:focus {
   color: mediumvioletred;
-}
-.navbar-inverse .navbar-toggle {
-  border-color: #fff;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #3bb0c9;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: beige;
-}
-.navbar-inverse .navbar-toggle:hover .icon-bar,
-.navbar-inverse .navbar-toggle:focus .icon-bar {
-  background-color: mediumvioletred;
 }

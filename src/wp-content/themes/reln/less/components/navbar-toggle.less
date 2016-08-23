@@ -5,29 +5,63 @@
 		border-color: @white; 	
 	
 	.navbar-collapse {
-		display: block;
 		border-color: @white;	
 		background-color: @reln-blue;
-		color: @white;
+		color: @white;	
+		visibility: visible;
 		
 		@media @mq-md-min {
 			background-color: @white;
 			color: @reln-blue;
 		}
+	}
+	
+	.side-collapse-container{
+		width: 100%;
+		position: relative;
+		right: 0;
+		transition: left .4s;
+	}
+	
+	.side-collapse-container.out{
+		left: 200px;
+	}
+	
+	.side-collapse {
+		top: 85px;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		position: fixed;
+		overflow: hidden;
+		transition: width .4s;
+		background-color: @reln-blue;		
 		
-		
-		
-		li a {
-			
-			
+		.in {
+			width: 0;
 		}
 	}
+	
+	.reln-nav 
+		margin: 30px;
+	
+		li > a {
+			opacity: 1;
+			transition: opacity .4s;
+			color: @white;
+		
+			&:hover {
+				color: @grey-light;
+			}
+		}
+	}	
 	
 	.navbar-toggle {		
 		z-index: 1000;
 		width: 65px;
 		margin: 0;
-		padding-top: 20px;
+		padding-top: 15px;
+		margin-top: 10px;;
 		text-align: center;
 		border: none;
 		border-radius: 0;
@@ -41,7 +75,7 @@
 			line-height:14px;
 			text-transform: uppercase;
 			transition: all 0.5s ease;
-		}
+		}		
 
 		&:hover,
 		&:focus {
@@ -106,14 +140,14 @@
 
 	.navbar-toggle.close-button{
 		background: @white;
-		transition: background-color 0.5s ease;
+		//transition: background-color 0.5s ease;
 
 		.open-text {
 			display: none;
 		}
 
 		.icon, p {
-			color: @green;
+			color: @reln-blue;
 			transition: all 0.5s ease;
 		}
 
@@ -124,5 +158,5 @@
 				transition: all 0.5s ease;
 			}
 		}
-	}
+	}		
 }
