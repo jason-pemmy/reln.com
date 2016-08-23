@@ -20,7 +20,7 @@
 				<div class="navbar-default-inner">
 					<div class="navbar-header container">
 						<a class="navbar-brand" href="<?php echo esc_url(home_url( '/' )); ?>">
-							<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-horizontal.png"
+							<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"
 								 alt="<?php bloginfo('name');?>">
 						</a>
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-haspopup="true" aria-expanded="false">
@@ -55,4 +55,3 @@
 			</header>
 		</div>	
 		<main id="main" class="main">
-		

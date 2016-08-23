@@ -1,3 +1,19 @@
+.navbar-default {
+  background-color: #fff;
+  border-color: #fff;
+}
+.navbar-default .navbar-collapse {
+  display: block;
+  border-color: #fff;
+  background-color: #003d79;
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .navbar-collapse {
+    background-color: #fff;
+    color: #003d79;
+  }
+}
 .navbar-default .navbar-toggle {
   z-index: 1000;
   width: 65px;
@@ -6,15 +22,12 @@
   text-align: center;
   border: none;
   border-radius: 0;
-  background: #077962;
+  background: #fff;
   transition: all 0.5s ease;
 }
 .navbar-default .navbar-toggle p.btn-text {
   margin-bottom: 0;
-  color: #f8f6ee;
-  font-family: "proxima-nova-extra-condensed", sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  color: #003d79;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -22,15 +35,15 @@
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background: #077962;
+  background: #003d79;
 }
 .navbar-default .navbar-toggle:hover p.btn-text,
 .navbar-default .navbar-toggle:focus p.btn-text {
-  color: #fdb813;
+  color: #fff;
 }
 .navbar-default .navbar-toggle:hover .hamburger-bar,
 .navbar-default .navbar-toggle:focus .hamburger-bar {
-  background: #fdb813;
+  background: #fff;
   transition: all 0.5s ease;
 }
 .navbar-default .navbar-toggle .hamburger {
@@ -40,7 +53,7 @@
   display: inline-block;
 }
 .navbar-default .navbar-toggle .hamburger-bar {
-  background: #f8f6ee;
+  background: #003d79;
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   -o-transform: rotate(0);
@@ -71,7 +84,7 @@
 }
 @media screen and (min-width: 992px) {
   .navbar-default .navbar-toggle {
-    display: block;
+    display: none;
   }
 }
 .navbar-default .navbar-toggle.collapsed .close-text {
@@ -93,6 +106,6 @@
 .navbar-default .navbar-toggle.close-button:focus .icon,
 .navbar-default .navbar-toggle.close-button:hover p,
 .navbar-default .navbar-toggle.close-button:focus p {
-  color: #fdb813;
+  color: #003d79;
   transition: all 0.5s ease;
 }

@@ -1,6 +1,28 @@
 @import '../utils/utils.less';
 
 .navbar-default {
+		background-color: @white;
+		border-color: @white; 	
+	
+	.navbar-collapse {
+		display: block;
+		border-color: @white;	
+		background-color: @reln-blue;
+		color: @white;
+		
+		@media @mq-md-min {
+			background-color: @white;
+			color: @reln-blue;
+		}
+		
+		
+		
+		li a {
+			
+			
+		}
+	}
+	
 	.navbar-toggle {		
 		z-index: 1000;
 		width: 65px;
@@ -9,13 +31,12 @@
 		text-align: center;
 		border: none;
 		border-radius: 0;
-		background: @green;
+		background: @white;
 		transition: all 0.5s ease;
 
 		p.btn-text {
 			margin-bottom: 0;
-			color: @cream-text;
-			#proxima-cond .bold;
+			color: @reln-blue;
 			font-size: 14px;
 			line-height:14px;
 			text-transform: uppercase;
@@ -24,14 +45,14 @@
 
 		&:hover,
 		&:focus {
-			background: @green;
+			background: @reln-blue;
 
 			p.btn-text {
-				color: @yellow;
+				color: @white;
 			}
 
 			.hamburger-bar {
-				background: @yellow;
+				background: @white;
 				transition: all 0.5s ease;
 			}
 		}
@@ -44,7 +65,7 @@
 		}
 
 		.hamburger-bar {
-			background: @cream-text;
+			background: @reln-blue;
 			.tbk-transform(rotate(0));
 			opacity: 1;
 			.size(100%, 2px);
@@ -73,7 +94,7 @@
 		}
 
 		@media @mq-md-min {
-			display: block;
+			display: none;
 		}
 	}
 
@@ -99,7 +120,7 @@
 		&:hover,
 		&:focus {
 			.icon, p {
-				color: @yellow;
+				color: @reln-blue;
 				transition: all 0.5s ease;
 			}
 		}
