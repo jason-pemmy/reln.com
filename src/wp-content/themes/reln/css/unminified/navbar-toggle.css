@@ -1,3 +1,25 @@
+/*
+// @screen-xs-min = 420px
+@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
+
+// @screen-sm-min = 768px
+@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
+
+// @screen-md-min = 992px
+@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
+
+// @screen-lg-min = 1200px
+@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
+
+// @screen-xl-min = 1400px
+@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
+
+// @screen-xxl-min = 1600px
+@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
+
+// @screen-xxl-min = 1800px
+@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
+*/
 .navbar-default {
   background-color: #fff;
   border-color: #fff;
@@ -51,15 +73,9 @@
 .navbar-default .reln-nav-tel-link a:hover,
 .navbar-default .reln-nav-tel-link a:focus {
   color: #bfbfbf;
-}
-.navbar-default .reln-nav-tel-link a:hover:after,
-.navbar-default .reln-nav-tel-link a:focus:after {
-  content: "";
-  height: 3px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
-  display: block;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  border-bottom-color: #bfbfbf;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 }
 .navbar-default .reln-nav {
   margin-top: 20px;
@@ -68,25 +84,21 @@
 }
 .navbar-default .reln-nav li {
   height: 50px;
-}
-.navbar-default .reln-nav li:hover:after,
-.navbar-default .reln-nav li:focus:after {
-  content: "";
-  height: 2px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
-  display: block;
-  margin-bottom: 3px;
-  margin-top: 3px;
+  text-align: center;
 }
 .navbar-default .reln-nav li a {
   color: #fff;
   white-space: nowrap;
   font-size: 19px;
-  text-align: center;
   text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 0;
 }
 .navbar-default .reln-nav li a:hover {
   color: #bfbfbf;
+  border-bottom-color: #bfbfbf;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 }
 .navbar-default .navbar-toggle {
   z-index: 1000;
@@ -108,18 +120,18 @@
   text-transform: uppercase;
   transition: all 0.5s ease;
 }
-.navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
   background: #003d79;
 }
-.navbar-default .navbar-toggle:hover p.btn-text {
+.navbar-default .navbar-toggle:hover p.btn-text,
+.navbar-default .navbar-toggle:focus p.btn-text {
   color: #fff;
 }
-.navbar-default .navbar-toggle:hover .hamburger-bar {
+.navbar-default .navbar-toggle:hover .hamburger-bar,
+.navbar-default .navbar-toggle:focus .hamburger-bar {
   background: #fff;
   transition: all 0.5s ease;
-}
-.navbar-default .navbar-toggle:focus {
-  background: #fff;
 }
 .navbar-default .navbar-toggle .hamburger {
   position: relative;
@@ -167,6 +179,7 @@
 }
 .navbar-default .navbar-toggle.close-button {
   background: #fff;
+  transition: background-color 0.5s ease;
 }
 .navbar-default .navbar-toggle.close-button .open-text {
   display: none;
@@ -176,10 +189,15 @@
   color: #003d79;
   transition: all 0.5s ease;
 }
+.navbar-default .navbar-toggle.close-button:hover,
+.navbar-default .navbar-toggle.close-button:focus {
+  background: #003d79;
+  transition: background-color 0.5s ease;
+}
 .navbar-default .navbar-toggle.close-button:hover .icon,
 .navbar-default .navbar-toggle.close-button:focus .icon,
 .navbar-default .navbar-toggle.close-button:hover p,
 .navbar-default .navbar-toggle.close-button:focus p {
-  color: #003d79;
+  color: #fff;
   transition: all 0.5s ease;
 }

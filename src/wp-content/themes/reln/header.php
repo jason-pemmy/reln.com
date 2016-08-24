@@ -43,6 +43,19 @@
 					</div>
 					<div class="navbar-inverse side-collapse in">
 						<div class="reln-nav-tel-link">t: <a href="" >1-855-215-6858</a></div>
+						<div class="reln-secondary-nav-container">
+							<?php
+								wp_nav_menu( array(
+									'container' => false,
+									'menu' => 'SecondaryMenu',
+									'menu_class' => 'nav navbar-nav reln-nav2',
+									'menu_id' => 'main-menu',
+									'link_before' => '',
+									'link_after' => '',
+									'walker' => '',
+								));
+							?>
+						</div>
 						<div class="reln-nav-container">
 							<?php
 								wp_nav_menu( array(
