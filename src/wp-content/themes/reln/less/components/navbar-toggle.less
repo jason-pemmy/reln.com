@@ -16,14 +16,14 @@
 		}
 	}
 	
-	.side-collapse-container{
+	.side-collapse-container {
 		width: 100%;
 		position: relative;
-		right: 0;
+		left: 0;
 		transition: left .4s;
 	}
 	
-	.side-collapse-container.out{
+	.side-collapse-container.out {
 		left: 200px;
 	}
 	
@@ -35,26 +35,76 @@
 		position: fixed;
 		overflow: hidden;
 		transition: width .4s;
-		background-color: @reln-blue;		
-		
-		.in {
-			width: 0;
-		}
+		background-color: @reln-blue;	
 	}
 	
-	.reln-nav 
-		margin: 30px;
+	.side-collapse.in {
+		width: 0;
+	}
 	
-		li > a {
-			opacity: 1;
-			transition: opacity .4s;
-			color: @white;
+	.reln-nav-tel-link {
+		height: 40px;
+		margin-top: 30px;		
+		text-align: center;
+		color: @grey-light;
+		white-space: nowrap;
 		
-			&:hover {
-				color: @grey-light;
+		
+		a {
+			color: @white;
+			white-space: nowrap;
+			font-size: 25px;			
+			
+			&:hover,
+			&:focus {
+				color: @grey-light;		
+				
+				&:after {
+					content: "";
+					height: 3px;
+					background: linear-gradient(to left,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(0,0,0,0) 100%);
+						
+					display: block;
+					margin-bottom: 3px;
+					margin-top: 3px;
+				}
+			}
+		}	
+	}
+	
+	.reln-nav {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		
+		li {
+			height: 50px;
+			&:hover,
+			&:focus {
+				&:after {
+					content: "";
+					height: 2px;
+					background: linear-gradient(to left,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(0,0,0,0) 100%);
+						
+					display: block;
+					margin-bottom: 3px;
+					margin-top: 3px;
+				}
+			}
+			
+			a {				
+				color: @white;
+				white-space: nowrap;
+				font-size: 19px;
+				text-align: center;
+				text-transform: uppercase;
+				
+				&:hover {
+					color: @grey-light;					
+				}
 			}
 		}
-	}	
+	}
 	
 	.navbar-toggle {		
 		z-index: 1000;
@@ -77,8 +127,7 @@
 			transition: all 0.5s ease;
 		}		
 
-		&:hover,
-		&:focus {
+		&:hover {
 			background: @reln-blue;
 
 			p.btn-text {
@@ -89,6 +138,10 @@
 				background: @white;
 				transition: all 0.5s ease;
 			}
+		}
+		
+		&:focus {
+			background: @white;
 		}
 
 		.hamburger {

@@ -41,18 +41,21 @@
 							</div>
 						</button>
 					</div>
-					<div class="side-collapse in">
-						<?php
-							wp_nav_menu( array(
-								'container' => false,
-								'menu' => 'MainMenu',
-								'menu_class' => 'nav navbar-nav reln-nav',
-								'menu_id' => 'main-menu',
-								'link_before' => '',
-								'link_after' => '',
-								'walker' => '',
-							));
-						?>
+					<div class="navbar-inverse side-collapse in">
+						<div class="reln-nav-tel-link">t: <a href="" >1-855-215-6858</a></div>
+						<div class="reln-nav-container">
+							<?php
+								wp_nav_menu( array(
+									'container' => false,
+									'menu' => 'MainMenu',
+									'menu_class' => 'nav navbar-nav reln-nav',
+									'menu_id' => 'main-menu',
+									'link_before' => '',
+									'link_after' => '',
+									'walker' => '',
+								));
+							?>	
+						</div>						
 					</div>
 				</div>
 			</header>

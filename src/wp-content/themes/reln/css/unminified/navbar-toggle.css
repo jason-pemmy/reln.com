@@ -17,7 +17,7 @@
 .navbar-default .side-collapse-container {
   width: 100%;
   position: relative;
-  right: 0;
+  left: 0;
   transition: left .4s;
 }
 .navbar-default .side-collapse-container.out {
@@ -33,16 +33,60 @@
   transition: width .4s;
   background-color: #003d79;
 }
-.navbar-default .navbar-nav > li > a {
-  opacity: 1;
-  transition: opacity .4s;
-  color: #fff;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: #bfbfbf;
-}
 .navbar-default .side-collapse.in {
   width: 0;
+}
+.navbar-default .reln-nav-tel-link {
+  height: 40px;
+  margin-top: 30px;
+  text-align: center;
+  color: #bfbfbf;
+  white-space: nowrap;
+}
+.navbar-default .reln-nav-tel-link a {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 25px;
+}
+.navbar-default .reln-nav-tel-link a:hover,
+.navbar-default .reln-nav-tel-link a:focus {
+  color: #bfbfbf;
+}
+.navbar-default .reln-nav-tel-link a:hover:after,
+.navbar-default .reln-nav-tel-link a:focus:after {
+  content: "";
+  height: 3px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
+  display: block;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.navbar-default .reln-nav {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.navbar-default .reln-nav li {
+  height: 50px;
+}
+.navbar-default .reln-nav li:hover:after,
+.navbar-default .reln-nav li:focus:after {
+  content: "";
+  height: 2px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
+  display: block;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.navbar-default .reln-nav li a {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.navbar-default .reln-nav li a:hover {
+  color: #bfbfbf;
 }
 .navbar-default .navbar-toggle {
   z-index: 1000;
@@ -64,18 +108,18 @@
   text-transform: uppercase;
   transition: all 0.5s ease;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover {
   background: #003d79;
 }
-.navbar-default .navbar-toggle:hover p.btn-text,
-.navbar-default .navbar-toggle:focus p.btn-text {
+.navbar-default .navbar-toggle:hover p.btn-text {
   color: #fff;
 }
-.navbar-default .navbar-toggle:hover .hamburger-bar,
-.navbar-default .navbar-toggle:focus .hamburger-bar {
+.navbar-default .navbar-toggle:hover .hamburger-bar {
   background: #fff;
   transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle:focus {
+  background: #fff;
 }
 .navbar-default .navbar-toggle .hamburger {
   position: relative;
@@ -123,14 +167,13 @@
 }
 .navbar-default .navbar-toggle.close-button {
   background: #fff;
-  transition: background-color 0.5s ease;
 }
 .navbar-default .navbar-toggle.close-button .open-text {
   display: none;
 }
 .navbar-default .navbar-toggle.close-button .icon,
 .navbar-default .navbar-toggle.close-button p {
-  color: #077962;
+  color: #003d79;
   transition: all 0.5s ease;
 }
 .navbar-default .navbar-toggle.close-button:hover .icon,
