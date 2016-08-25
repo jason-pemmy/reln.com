@@ -24,8 +24,12 @@
 */
 
 .navbar-default {
-		background-color: @white;
-		border-color: @white; 	
+	background-color: @white;
+	border-color: @white; 
+	
+	.navbar-header-container {
+		float: none;
+	}
 	
 	.navbar-collapse {
 		border-color: @white;	
@@ -46,23 +50,28 @@
 		transition: left .4s;
 	}
 	
-	.side-collapse-container.out {
-		left: 200px;
-	}
-	
 	.side-collapse {
+		position: fixed;
 		top: 85px;
 		bottom: 0;
 		right: 0;
-		width: 100%;
-		position: fixed;
+		width: 100%;		
 		overflow: hidden;
 		transition: width .4s;
 		background-color: @reln-blue;	
+		
+		@media @mq-md-min {
+			top: 0;
+			background-color: transparent;
+		}
 	}
 	
 	.side-collapse.in {
 		width: 0;
+		
+		@media @mq-md-min {
+			width: 100%;
+		}
 	}
 	
 	.reln-nav-tel-link {
@@ -70,22 +79,32 @@
 		margin-top: 30px;		
 		text-align: center;
 		color: @grey-light;
-		white-space: nowrap;
-		
+		white-space: nowrap;		
 		
 		a {
 			color: @white;
 			white-space: nowrap;
-			font-size: 25px;			
-			
+			font-size: 25px;	
+	
 			&:hover,
 			&:focus {
-				color: @grey-light;		
-				border-bottom-color: @grey-light;
-				border-bottom-width: 3px;
-				border-bottom-style: solid;				
+				color: @grey-light;					
+			}
+			
+			@media @mq-md-min {
+				color: #000;
+				font-size: 14px;
+				font-weight: bold;
+				margin-right: 20px;
 			}
 		}	
+		
+		@media @mq-md-min {
+			margin-top: 0;
+			text-align: right;
+			color: #000;
+			background-color: transparent;
+		}
 	}
 	
 	.reln-nav {
@@ -98,20 +117,79 @@
 			text-align: center;
 			
 			a {				
+				display: inline-block;				
+				padding-bottom: 0;
 				color: @white;
 				white-space: nowrap;
 				font-size: 19px;				
 				text-transform: uppercase;
-				display: inline-block;
-				padding-bottom: 0;
+				
 				&:hover {
 					color: @grey-light;					
 					border-bottom-color: @grey-light;
 					border-bottom-width: 3px;
 					border-bottom-style: solid;
+					
+					@media @mq-md-min {
+						color: @reln-blue;
+						border-bottom-color: @reln-blue;
+					}
 				}
+				
+				@media @mq-md-min {
+					color: @reln-blue;
+					padding-bottom: 20px;
+				}			
 			}
 		}
+	}
+	
+	.reln-secondary-nav-container{
+		width: 275px;
+		margin: 0 auto;		
+		margin-bottom: 70px;
+		
+		.reln-nav2 {
+			li {
+				height: 20px;				
+				display: inline-block;				
+				
+				&:first-child a {
+					&:before {
+						content: 'New';					   	
+						position: absolute;
+						left: -17px;
+    					top: -4px;
+					   	width: 28px;
+					   	height: 28px;						
+					   	padding-top: 4px;
+						padding-left: 2px;
+						-moz-border-radius: 28px;
+					   	-webkit-border-radius: 28px;
+					   	border-radius: 28px;
+					   	background-color: red;
+						color: @white;
+						font-size: 11px;						
+					}
+				}
+				
+				&:last-child {
+					display: block;
+					text-align: center;	
+				}
+				
+				a {				
+					color: @white;
+					white-space: nowrap;
+					font-size: 17px;							
+					padding-bottom: 0;				
+					
+					&:hover {
+						color: @grey-light;					
+					}
+				}				
+			}
+		}	
 	}
 	
 	.navbar-toggle {		

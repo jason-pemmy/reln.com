@@ -24,6 +24,9 @@
   background-color: #fff;
   border-color: #fff;
 }
+.navbar-default .navbar-header-container {
+  float: none;
+}
 .navbar-default .navbar-collapse {
   border-color: #fff;
   background-color: #003d79;
@@ -42,21 +45,29 @@
   left: 0;
   transition: left .4s;
 }
-.navbar-default .side-collapse-container.out {
-  left: 200px;
-}
 .navbar-default .side-collapse {
+  position: fixed;
   top: 85px;
   bottom: 0;
   right: 0;
   width: 100%;
-  position: fixed;
   overflow: hidden;
   transition: width .4s;
   background-color: #003d79;
 }
+@media screen and (min-width: 992px) {
+  .navbar-default .side-collapse {
+    top: 0;
+    background-color: transparent;
+  }
+}
 .navbar-default .side-collapse.in {
   width: 0;
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .side-collapse.in {
+    width: 100%;
+  }
 }
 .navbar-default .reln-nav-tel-link {
   height: 40px;
@@ -73,9 +84,22 @@
 .navbar-default .reln-nav-tel-link a:hover,
 .navbar-default .reln-nav-tel-link a:focus {
   color: #bfbfbf;
-  border-bottom-color: #bfbfbf;
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav-tel-link a {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav-tel-link {
+    margin-top: 0;
+    text-align: right;
+    color: #000;
+    background-color: transparent;
+  }
 }
 .navbar-default .reln-nav {
   margin-top: 20px;
@@ -87,18 +111,68 @@
   text-align: center;
 }
 .navbar-default .reln-nav li a {
+  display: inline-block;
+  padding-bottom: 0;
   color: #fff;
   white-space: nowrap;
   font-size: 19px;
   text-transform: uppercase;
-  display: inline-block;
-  padding-bottom: 0;
 }
 .navbar-default .reln-nav li a:hover {
   color: #bfbfbf;
   border-bottom-color: #bfbfbf;
   border-bottom-width: 3px;
   border-bottom-style: solid;
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav li a:hover {
+    color: #003d79;
+    border-bottom-color: #003d79;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav li a {
+    color: #003d79;
+    padding-bottom: 20px;
+  }
+}
+.navbar-default .reln-secondary-nav-container {
+  width: 275px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.navbar-default .reln-secondary-nav-container .reln-nav2 li {
+  height: 20px;
+  display: inline-block;
+}
+.navbar-default .reln-secondary-nav-container .reln-nav2 li:first-child a:before {
+  content: 'New';
+  position: absolute;
+  left: -17px;
+  top: -4px;
+  width: 28px;
+  height: 28px;
+  padding-top: 4px;
+  padding-left: 2px;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  background-color: red;
+  color: #fff;
+  font-size: 11px;
+}
+.navbar-default .reln-secondary-nav-container .reln-nav2 li:last-child {
+  display: block;
+  text-align: center;
+}
+.navbar-default .reln-secondary-nav-container .reln-nav2 li a {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 17px;
+  padding-bottom: 0;
+}
+.navbar-default .reln-secondary-nav-container .reln-nav2 li a:hover {
+  color: #bfbfbf;
 }
 .navbar-default .navbar-toggle {
   z-index: 1000;
