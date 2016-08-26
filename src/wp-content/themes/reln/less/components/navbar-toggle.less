@@ -57,7 +57,7 @@
 		right: 0;
 		width: 100%;		
 		overflow: hidden;
-		transition: width .4s;
+		transition: none;
 		background-color: @reln-blue;	
 		
 		@media @mq-md-min {
@@ -72,6 +72,10 @@
 		@media @mq-md-min {
 			width: 100%;
 		}
+	}
+	
+	.side-collapse.activated {
+		transition: width .4s;	
 	}
 	
 	.reln-nav-tel-link {
@@ -124,6 +128,12 @@
 				font-size: 19px;				
 				text-transform: uppercase;
 				
+				@media @mq-md-min {
+					font-size: 15px;
+					padding-right: 9px;
+					padding-left: 9px;
+				}
+				
 				&:hover {
 					color: @grey-light;					
 					border-bottom-color: @grey-light;
@@ -156,6 +166,7 @@
 				
 				&:first-child a {
 					&:before {
+						display: block;
 						content: 'New';					   	
 						position: absolute;
 						left: -17px;
@@ -169,7 +180,11 @@
 					   	border-radius: 28px;
 					   	background-color: red;
 						color: @white;
-						font-size: 11px;						
+						font-size: 11px;
+						
+						@media @mq-xs-min {
+							display: none; 
+						}
 					}
 				}
 				

@@ -52,7 +52,7 @@
   right: 0;
   width: 100%;
   overflow: hidden;
-  transition: width .4s;
+  transition: none;
   background-color: #003d79;
 }
 @media screen and (min-width: 992px) {
@@ -68,6 +68,9 @@
   .navbar-default .side-collapse.in {
     width: 100%;
   }
+}
+.navbar-default .side-collapse.activated {
+  transition: width .4s;
 }
 .navbar-default .reln-nav-tel-link {
   height: 40px;
@@ -118,6 +121,13 @@
   font-size: 19px;
   text-transform: uppercase;
 }
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav li a {
+    font-size: 16px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
 .navbar-default .reln-nav li a:hover {
   color: #bfbfbf;
   border-bottom-color: #bfbfbf;
@@ -146,6 +156,7 @@
   display: inline-block;
 }
 .navbar-default .reln-secondary-nav-container .reln-nav2 li:first-child a:before {
+  display: block;
   content: 'New';
   position: absolute;
   left: -17px;
@@ -160,6 +171,11 @@
   background-color: red;
   color: #fff;
   font-size: 11px;
+}
+@media screen and (min-width: 480px) {
+  .navbar-default .reln-secondary-nav-container .reln-nav2 li:first-child a:before {
+    display: none;
+  }
 }
 .navbar-default .reln-secondary-nav-container .reln-nav2 li:last-child {
   display: block;
