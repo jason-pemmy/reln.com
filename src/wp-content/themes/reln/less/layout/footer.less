@@ -1,38 +1,99 @@
 @import '../utils/utils.less';
 
-.footer-nav-container {
-	padding-top: 10px;
-	text-align: center;
-	
-	.footer-menu {	
-		margin: 0;
-		padding: 0;
-		list-style-type: none;	
+/*
+// @screen-xs-min = 420px
+@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
 
-		li {
-			display: inline;
+// @screen-sm-min = 768px
+@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
 
-			&:after {
-				content: " | ";
-			}
+// @screen-md-min = 992px
+@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
 
-			&:last-child:after {
-			  content: '';
+// @screen-lg-min = 1200px
+@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
+
+// @screen-xl-min = 1400px
+@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
+
+// @screen-xxl-min = 1600px
+@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
+
+// @screen-xxl-min = 1800px
+@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
+*/
+
+.page-footer {	
+	.navbar-fixed-bottom {
+		margin-top: 15px;
+		padding-bottom: 15px;
+		background-color: @reln-blue;
+		
+		h4 {
+			color: @white;
+		}
+
+		.footer-nav-container {
+			padding-top: 10px;
+			text-align: center;
+
+			.footer-menu {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+
+				li {
+					
+					a:hover, a:focus {
+						color: @white;
+					}
+				}
 			}
 			
-			a:hover, a:focus{		
-				color: mediumvioletred;
+			@media @mq-sm-min {
+				text-align: left;
 			}
+		}
+		
+		.footer-nav-container-secondary {
+			padding-top: 10px;
+			text-align: center;
+
+			.footer-menu {	
+				margin: 0;
+				padding: 0;
+				list-style-type: none;	
+
+				li {
+					a:hover, a:focus{		
+						color: @white;
+					}
+				}
+			}
+			
+			@media @mq-sm-min {
+				text-align: left;
+			}
+		}		
+
+		.footer-sm-link-container {
+			padding-top: 10px;
+			text-align: center;
+			font-size: 1.2em;
+
+			a:hover, a:focus {
+				color: @white;
+			}
+		}
+		
+		.where-to-buy {
+			height: 100px;
+			width: 275px;
+			margin: 0 auto;
+			//text-align: center;
+			background-color: #337ab7;
 		}
 	}
 }
 
-.footer-sm-link-container {
-	padding-top: 10px;
-	text-align: center;
-	font-size: 1.2em;
-	
-	a:hover, a:focus {
-		color: mediumvioletred;
-	}
-}
+

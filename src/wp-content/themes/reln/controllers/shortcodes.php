@@ -13,11 +13,11 @@ class TBK_Shortcodes extends Base_Factory {
 		$this->register( 'phone', false );
 		$this->register( 'email', false );
 		$this->register( 'address', false );
-		$this->register( 'hero-banner', false );
+		$this->register( 'hero-banner', true );
 		$this->register( 'form-sample', false );
 		$this->register( 'frontend-tool', false );
 		$this->register( 'security-monitor-navbar', true );
-		$this->register( 'security-monitor-content-list', true );
+		$this->register( 'security-monitor-content-list', true ); 
 		//styling elements
 		$this->register( 'style-guide', array(
 			'category' => 'tbk styles',

@@ -16,7 +16,7 @@
 			<?php _e('Skip to content', 'the-theme'); ?>
 		</a><div class="site-wrapper">
 		<div class="navbar-default-container">
-			<header class="banner navbar navbar-default navbar-static-top" role="banner">
+			<header class="banner navbar navbar-default navbar-static-top container" role="banner">
 				<div class="navbar-default-inner">
 					<div class="navbar-header container">
 						<a class="navbar-brand" href="<?php echo esc_url(home_url( '/' )); ?>">
