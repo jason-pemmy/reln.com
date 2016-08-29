@@ -13,9 +13,18 @@ body {
   padding-bottom: 50px;
   /*for sticky footer*/
 }
+body.disable-scrolling {
+  overflow-y: hidden;
+}
 .main {
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    margin-top: 121px;
+  }
 }
 .wpb_row.container > .vc_col-sm-12 > .vc_column-inner {
   padding-left: 0;

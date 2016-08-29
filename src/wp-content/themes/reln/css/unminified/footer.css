@@ -1,34 +1,25 @@
-/*
-// @screen-xs-min = 420px
-@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
-
-// @screen-sm-min = 768px
-@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
-
-// @screen-md-min = 992px
-@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
-
-// @screen-lg-min = 1200px
-@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
-
-// @screen-xl-min = 1400px
-@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
-
-// @screen-xxl-min = 1600px
-@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
-
-// @screen-xxl-min = 1800px
-@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
-*/
 .page-footer .navbar-fixed-bottom {
-  margin-top: 15px;
-  padding-bottom: 15px;
+  position: inherit;
+  padding-top: 75px;
+  padding-bottom: 55px;
   background-color: #003d79;
 }
 .page-footer .navbar-fixed-bottom h4 {
   color: #fff;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .navbar-fixed-bottom h4 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page-footer .navbar-fixed-bottom h4 {
+    margin-bottom: 40px;
+  }
 }
 .page-footer .navbar-fixed-bottom .footer-nav-container {
+  margin-bottom: 20px;
   padding-top: 10px;
   text-align: center;
 }
@@ -49,6 +40,7 @@
 .page-footer .navbar-fixed-bottom .footer-nav-container-secondary {
   padding-top: 10px;
   text-align: center;
+  margin-bottom: 20px;
 }
 .page-footer .navbar-fixed-bottom .footer-nav-container-secondary .footer-menu {
   margin: 0;
@@ -77,5 +69,49 @@
   height: 100px;
   width: 275px;
   margin: 0 auto;
+  margin-bottom: 20px;
   background-color: #337ab7;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .navbar-fixed-bottom .where-to-buy {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page-footer .navbar-fixed-bottom .where-to-buy {
+    width: 95%;
+  }
+}
+.page-footer .navbar-fixed-bottom .whats-happening {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  color: #337ab7;
+}
+.page-footer .navbar-fixed-bottom .whats-happening span {
+  font-weight: bold;
+  color: #84a2bb;
+}
+.page-footer .bottom-footer {
+  height: 20px;
+  margin-top: 20px;
+  color: #000;
+  font-size: 14px;
+}
+.page-footer .bottom-footer .tbk-link {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .bottom-footer .tbk-link {
+    text-align: left;
+  }
+}
+.page-footer .bottom-footer .aoda-link {
+  text-align: center;
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer .bottom-footer .aoda-link {
+    text-align: right;
+  }
 }

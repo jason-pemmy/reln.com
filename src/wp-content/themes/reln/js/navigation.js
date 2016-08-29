@@ -8,6 +8,7 @@ jQuery(function ($){
 		$(this).toggleClass("collapsed");
 		$(sel).toggleClass('in');
 		$(sel).addClass("activated").toggleClass("active");
+		$("body").toggleClass("disable-scrolling");
 	});
 	
 	$(window).on('resize',function() {

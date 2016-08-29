@@ -13,7 +13,7 @@ class TBK_Shortcodes extends Base_Factory {
 		$this->register( 'phone', false );
 		$this->register( 'email', false );
 		$this->register( 'address', false );
-		$this->register( 'hero-banner', true );
+		
 		$this->register( 'form-sample', false );
 		$this->register( 'frontend-tool', false );
 		$this->register( 'security-monitor-navbar', true );
@@ -26,6 +26,28 @@ class TBK_Shortcodes extends Base_Factory {
 			'name' => 'wptest.io Formatting',
 			'category' => 'tbk styles',
 		) );
+		
+		$this->register( 'hero-banner', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+			),
+		));
+		
 		$button_params = array(
 			array(
 				'type' => 'vc_link',
@@ -81,18 +103,28 @@ class TBK_Shortcodes extends Base_Factory {
 			'show_settings_on_create' => true,
 			'params' => array(
 				array(
-					'heading' => 'Image',
-					'param_name' => 'image',
+					'heading' => ' Background Image',
+					'param_name' => 'bg-image',
+					'type' => 'attach_image',
+				),
+				array(
+					'heading' => ' Product Image',
+					'param_name' => 'product-image',
 					'type' => 'attach_image',
 				),
                 array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+				array(
 					'type' => 'textfield',
 					'heading' => 'Copy',
 					'param_name' => 'copy',
 				),
 			),
 		) );
-        
+        	
 		$this->register( 'basic-container', array(
 			'name' => 'Basic Container',
 			'base' => 'basic_container',
@@ -172,22 +204,16 @@ class TBK_Shortcodes extends Base_Factory {
 	}
 	function hero_banner( $atts ) {
 		$atts = shortcode_atts( array(
-				'parallax' => false,
-				'title' => null,
+			'image' => null,
+			'heading' => null,
+			'copy' => null,
 		), $atts );
-		if ( empty( $atts['title'] ) ) {
-			$atts['title'] = get_the_title();
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'hero-banner' );
 		}
-		$related = get_query_var( 'related' );
-		$post_id = is_archive() ? - 1 : get_the_ID();
-		$hide = get_field('hide_hero_banner', $post_id);
-		if($hide) {
-			return;
-		}
-		$thumb_id = The_Theme::get_post_thumbnail_id( ( ! empty( $related ) ? $related->ID : $post_id ) );
-		$src = The_Theme::responsive_bg( $thumb_id, 'hero-banner' );
-		$atts['banner_attr'] = $src;
-		return TBK_Render::shortcode_view( 'hero-banner', apply_filters( 'hero_banner', $atts ) );
+
+		return TBK_Render::shortcode_view( 'hero-banner', $atts );
 	}
 	function phone() {
 		$phone = get_field( 'phone', 'options' );
@@ -249,16 +275,19 @@ class TBK_Shortcodes extends Base_Factory {
     
     function product_feature( $atts ) {
 		$atts = shortcode_atts( array(
-			'image' => null,
+			'bg-image' => null,
+			'product-image	' => null,
+			'heading' => null,
 			'copy' => null,
 		), $atts );
-
+		
 		if ( ! empty( $atts['copy'] ) ) {
 			//$atts['copy'] = vc_build_link( $atts['copy'] );
 		}
 
 		if( ! empty( $atts['image'] ) ) {
-			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-feature' );
+			$atts['bg-image'] = TBK_Theme::get_attachment_image_url( $atts['bg-image'], 'product-feature' );
+			$atts['product-image'] = TBK_Theme::get_attachment_image_url( $atts['product-image'], 'product-feature' );
 		}
 
 		return TBK_Render::shortcode_view( 'product-feature', $atts );

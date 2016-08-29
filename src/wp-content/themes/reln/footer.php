@@ -40,12 +40,25 @@
 							<div class="col-xs-12 col-sm-6 col-md-3 footer-nav-container">
 								<h4>What's Happening at RELN: </h4>
 								<div class="whats-happening">
-									<span>April 12, 2016</span>	
+									<h5>April 12, 2016</h5>
+									<span>Aliquam Tincidunt Mauris</span>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh urna</p>
 								</div>								
 							</div>	
 						</div>						
 					</div>
 				</nav>
+				<div class="container bottom-footer">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 tbk-link">
+							<p> Copyright © 2016 <strong>Reln Pty Ltd</strong>. All rights reserved. <a href='#'>Privacy & Terms</a><br/>
+							<span><a href="#">tbk Creative | Web Design & Digital Marketing</a></span></p>	
+						</div>
+						<div class="col-xs-12 col-sm-6 aoda-link">
+							<p><a href="#"><span class="icon-aoda-online"></span></a></p>
+						</div>
+					</div>					
+				</div>
 			</footer>
 		<?php wp_footer(); ?>
 	</body>

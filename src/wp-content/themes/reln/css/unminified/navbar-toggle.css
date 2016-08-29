@@ -25,7 +25,7 @@
 }
 .navbar-default .side-collapse {
   position: fixed;
-  top: 85px;
+  top: 104px;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -115,10 +115,17 @@
     padding-left: 15px;
   }
 }
+@media screen and (min-width: 1400px) {
+  .navbar-default .reln-nav li a {
+    font-size: 17px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
 .navbar-default .reln-nav li a:hover {
   color: #bfbfbf;
   border-bottom-color: #bfbfbf;
-  border-bottom-width: 3px;
+  border-bottom-width: 4px;
   border-bottom-style: solid;
 }
 @media screen and (min-width: 992px) {
@@ -131,6 +138,11 @@
   .navbar-default .reln-nav li a {
     color: #003d79;
     padding-bottom: 13px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-default .reln-nav {
+    margin-top: 35px;
   }
 }
 .navbar-default .reln-secondary-nav-container {

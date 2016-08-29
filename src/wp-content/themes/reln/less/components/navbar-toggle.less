@@ -29,13 +29,13 @@
 	
 	.side-collapse {
 		position: fixed;
-		top: 85px;
+		top: 104px;
 		bottom: 0;
 		right: 0;
 		width: 100%;
 		overflow: hidden;
 		transition: none;
-		background-color: @reln-blue;
+		background-color: @reln-blue;		
 		
 		@media @mq-md-min {
 			position: absolute;
@@ -119,10 +119,16 @@
 					padding-left: 15px;
 				}
 				
+				@media @mq-xl-min {
+					font-size: 17px;
+					padding-right: 30px;
+					padding-left: 30px;
+				}
+				
 				&:hover {
 					color: @grey-light;
 					border-bottom-color: @grey-light;
-					border-bottom-width: 3px;
+					border-bottom-width: 4px;
 					border-bottom-style: solid;
 					
 					@media @mq-md-min {
@@ -136,6 +142,9 @@
 					padding-bottom: 13px;
 				}
 			}
+		}
+		@media @mq-md-min {
+			margin-top: 35px;
 		}
 	}
 	
