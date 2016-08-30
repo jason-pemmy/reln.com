@@ -48,6 +48,32 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 		));
 		
+		 $this->register( 'product-feature', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Background Image',
+					'param_name' => 'bg_image',
+					'type' => 'attach_image',
+				),
+				array(
+					'heading' => 'Product Image',
+					'param_name' => 'product_image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+			),
+		));
+		
 		$button_params = array(
 			array(
 				'type' => 'vc_link',
@@ -98,32 +124,6 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 			) ),
 		) );
-        
-        $this->register( 'product-feature', array(
-			'show_settings_on_create' => true,
-			'params' => array(
-				array(
-					'heading' => ' Background Image',
-					'param_name' => 'bg-image',
-					'type' => 'attach_image',
-				),
-				array(
-					'heading' => ' Product Image',
-					'param_name' => 'product-image',
-					'type' => 'attach_image',
-				),
-                array(
-					'type' => 'textfield',
-					'heading' => 'Heading',
-					'param_name' => 'heading',
-				),
-				array(
-					'type' => 'textfield',
-					'heading' => 'Copy',
-					'param_name' => 'copy',
-				),
-			),
-		) );
         	
 		$this->register( 'basic-container', array(
 			'name' => 'Basic Container',
@@ -172,9 +172,14 @@ class TBK_Shortcodes extends Base_Factory {
 					'heading' => 'Classes',
 					'param_name' => 'classes',
 				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
 			),
 			'js_view' => 'VcColumnView',
-		) );        
+		) );       
 	}
 	public function register( $tag, $vc_map = array() ) {
 		add_shortcode( $tag, array( &$this, strtolower( str_replace( '-', '_', $tag ) ) ) );
@@ -202,6 +207,7 @@ class TBK_Shortcodes extends Base_Factory {
 		//customize existing vc elements
 		vc_remove_element( 'vc_button' );
 	}
+	
 	function hero_banner( $atts ) {
 		$atts = shortcode_atts( array(
 			'image' => null,
@@ -215,6 +221,27 @@ class TBK_Shortcodes extends Base_Factory {
 
 		return TBK_Render::shortcode_view( 'hero-banner', $atts );
 	}
+	
+	function product_feature( $atts ) {
+		$atts = shortcode_atts( array(
+			'bg_image' => null,
+			'product_image' => null,
+			'heading' => null,
+			'copy' => null,
+		), $atts );
+
+		if( ! empty( $atts['bg_image'] ) ) {
+			$atts['bg_image'] = TBK_Theme::get_attachment_image_url( $atts['bg_image'], 'product-feature' );
+		}
+		
+		if( ! empty( $atts['product_image'] ) ) {			
+			$atts['product_image'] = TBK_Theme::get_attachment_image_url( $atts['product_image'], 'product-feature' );
+		}
+
+		return TBK_Render::shortcode_view( 'product-feature', $atts );
+		
+	}
+	
 	function phone() {
 		$phone = get_field( 'phone', 'options' );
 		return '<a href="tel:' . $phone . '">' . $phone . '</a>';
@@ -271,29 +298,11 @@ class TBK_Shortcodes extends Base_Factory {
     
 	function frontend_tool() {
 		return TBK_Render::shortcode_view( 'frontend-tool' );
-	}
-    
-    function product_feature( $atts ) {
-		$atts = shortcode_atts( array(
-			'bg-image' => null,
-			'product-image	' => null,
-			'heading' => null,
-			'copy' => null,
-		), $atts );
-		
-		if ( ! empty( $atts['copy'] ) ) {
-			//$atts['copy'] = vc_build_link( $atts['copy'] );
-		}
-
-		if( ! empty( $atts['image'] ) ) {
-			$atts['bg-image'] = TBK_Theme::get_attachment_image_url( $atts['bg-image'], 'product-feature' );
-			$atts['product-image'] = TBK_Theme::get_attachment_image_url( $atts['product-image'], 'product-feature' );
-		}
-
-		return TBK_Render::shortcode_view( 'product-feature', $atts );
-	}
+	}    
 }
+
 TBK_Shortcodes::instantiate();
+
 function encode_array_for_sc( $array ) {
 	return urlencode( serialize( $array ) );
 }
@@ -345,6 +354,7 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 		protected function content( $atts = null, $content = null, $view = 'features-container' ) {
 			$atts = shortcode_atts( array(
 				'classes' => null,
+				'heading' => null,
 			), $atts );
 			return parent::content( $atts, $content, $view );
 		}
