@@ -1,0 +1,17 @@
+.product-feature-container {
+  width: 100%;
+  height: 600px;
+  padding-top: 100px;
+  background-color: #fbfafa;
+}
+.product-feature-container .heading-container {
+  width: 65%;
+  height: 50px;
+  margin: 0 auto;
+  border-bottom-style: solid;
+  border-bottom-color: #003d79;
+  border-bottom-width: 3px;
+  text-align: center;
+  color: #003d79;
+  text-transform: uppercase;
+}

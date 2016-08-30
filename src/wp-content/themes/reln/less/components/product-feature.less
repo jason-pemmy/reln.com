@@ -1,0 +1,76 @@
+@import '../utils/utils.less';
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.product-feature {
+	height: 440px;
+	
+	.product-feature-bg {
+		margin-top: 30px; 
+		text-align: center;
+
+		img {
+			width: 100%;		
+		}
+
+		.product-feature-fg {
+			position: absolute;
+			left: 50%;
+			top: 155px;
+			width: 84%;
+			height: 250px;
+			margin-left: -42%;
+			background-color: @white;
+
+			img {
+				width: 65%;
+				margin-top: 40px;			
+			}
+
+			h4 {
+				margin-top: 20px;
+				font-size: 1.2em;
+				font-weight: bold;
+				letter-spacing: 2px;
+				color: @reln-blue;
+			}	
+
+			span {
+				margin-left: 10px;
+				margin-right: 10px;
+				font-size: 14px;
+			}
+		}	
+	}
+}
