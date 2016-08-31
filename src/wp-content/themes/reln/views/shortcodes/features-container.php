@@ -4,6 +4,7 @@
 			<div class="product-feature-content">
 				<div class="heading-container">
 					<h3><?php echo $heading; ?></h3>
+					<div class="features-container-underline"></div>
 				</div>				
 				{content}
 			</div>
