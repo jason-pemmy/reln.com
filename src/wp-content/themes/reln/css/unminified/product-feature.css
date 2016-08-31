@@ -1,36 +1,33 @@
-.col-xs-15,
-.col-sm-15,
-.col-md-15,
-.col-lg-15 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.col-xs-15 {
-  width: 20%;
-  float: left;
-}
-@media (min-width: 768px) {
-  .col-sm-15 {
-    width: 20%;
-    float: left;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-15 {
-    width: 20%;
-    float: left;
-  }
-}
-@media (min-width: 1200px) {
-  .col-lg-15 {
-    width: 20%;
-    float: left;
-  }
-}
+/*
+// @screen-xs-min = 420px
+@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
+
+// @screen-sm-min = 768px
+@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
+
+// @screen-md-min = 992px
+@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
+
+// @screen-lg-min = 1200px
+@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
+
+// @screen-xl-min = 1400px
+@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
+
+// @screen-xxl-min = 1600px
+@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
+
+// @screen-xxl-min = 1800px
+@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
+*/
 .product-feature {
-  height: 510px;
+  height: 450px;
+  background-color: #fbfafa;
+}
+@media screen and (min-width: 1200px) {
+  .product-feature {
+    height: 510px;
+  }
 }
 .product-feature .product-feature-bg {
   margin-top: 30px;
@@ -42,7 +39,7 @@
 .product-feature .product-feature-bg .product-feature-fg {
   position: absolute;
   left: 50%;
-  top: 135px;
+  top: 125px;
   width: 84%;
   height: 307px;
   margin-left: -42%;
@@ -50,18 +47,37 @@
 }
 .product-feature .product-feature-bg .product-feature-fg img {
   width: 65%;
-  margin-top: 55px;
+  margin-top: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .product-feature .product-feature-bg .product-feature-fg img {
+    margin-top: 55px;
+  }
 }
 .product-feature .product-feature-bg .product-feature-fg h4 {
   margin-top: 25px;
-  font-size: 1.2em;
   font-weight: bold;
   color: #003d79;
+}
+@media screen and (min-width: 1200px) {
+  .product-feature .product-feature-bg .product-feature-fg h4 {
+    font-size: 1.2em;
+  }
 }
 .product-feature .product-feature-bg .product-feature-fg span {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 14px;
+}
+.product-feature .product-feature-bg .product-feature-fg a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #003d79;
+  font-size: 13px;
+}
+.product-feature .product-feature-bg .product-feature-fg a:hover {
+  color: #bfbfbf;
 }
 .corrugate-product .product-feature-bg > .product-feature-fg > img,
 .downspout-product .product-feature-bg > .product-feature-fg > img,
