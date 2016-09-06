@@ -1,0 +1,82 @@
+.product-solutions {
+  width: 100%;
+  text-align: center;
+}
+.product-solutions .product-solution.odd-color {
+  width: 465px;
+  height: 350px;
+  background-color: #fbfafa;
+}
+.product-solutions .product-solution {
+  display: inline-block;
+  width: 465px;
+  height: 350px;
+  margin-top: -10px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-align: left;
+  z-index: 20;
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-img {
+  float: left;
+  padding-left: 20px;
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-header {
+  float: left;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 25px;
+  color: #0081bc;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 0.9;
+  letter-spacing: -0.8px;
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-link {
+  float: left;
+  padding-left: 20px;
+  padding-top: 25px;
+  color: #0081bc;
+  font-size: 15px;
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-link span {
+  padding-left: 8px;
+  font-size: 12px;
+}
+.product-solutions .product-solution .overlay {
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  top: -150px;
+  width: 540px;
+  height: 355px;
+  border-style: none;
+  margin-left: -50px;
+  border-left: 50px;
+  border-left-style: solid;
+  border-left-color: #fff;
+  border-right: 30px;
+  border-right-style: solid;
+  border-right-color: #fff;
+  border-bottom: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+.product-solutions .product-solution:hover {
+  background-color: #fff;
+}
+.product-solutions .product-solution:hover .product-solution-bg > .product-solution-fg > .product-solution-header {
+  color: #000;
+}
+.product-solutions .product-solution:hover .overlay {
+  display: block;
+  -webkit-box-shadow: 5px 5px 40px 0px rgba(189, 185, 189, 0.66);
+  -moz-box-shadow: 5px 5px 40px 0px rgba(189, 185, 189, 0.66);
+  box-shadow: 5px 5px 40px 0px rgba(189, 185, 189, 0.66);
+}

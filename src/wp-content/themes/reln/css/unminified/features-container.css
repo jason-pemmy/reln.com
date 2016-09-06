@@ -1,89 +1,40 @@
-/*
-// @screen-xs-min = 420px
-@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
-
-// @screen-sm-min = 768px
-@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
-
-// @screen-md-min = 992px
-@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
-
-// @screen-lg-min = 1200px
-@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
-
-// @screen-xl-min = 1400px
-@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
-
-// @screen-xxl-min = 1600px
-@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
-
-// @screen-xxl-min = 1800px
-@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
-*/
 .product-feature-container {
-  width: 100%;
-  height: auto;
-  padding-top: 50px;
-  background-color: #fafafa;
-}
-@media screen and (min-width: 480px) {
-  .product-feature-container {
-    padding-top: 65px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .product-feature-container {
-    padding-top: 85px;
-  }
+  width: 80%;
+  height: 235px;
+  margin: 0 auto;
+  padding-top: 30px;
+  background-color: #fbfafa;
 }
 @media screen and (min-width: 1200px) {
   .product-feature-container {
-    height: 260px;
-    width: 78%;
-    padding-top: 100px;
-    margin: 0 auto;
+    height: 335px;
+    padding-top: 135px;
   }
 }
 .product-feature-container .heading-container {
   width: 100%;
+  height: 50px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   text-align: center;
-  color: #003d79;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 480px) {
-  .product-feature-container .heading-container {
-    padding-bottom: 70px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .product-feature-container .heading-container {
-    padding-bottom: 90px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .product-feature-container .heading-container {
-    padding-bottom: 100px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .product-feature-container .heading-container {
     width: 65%;
-    padding-bottom: 10px;
   }
 }
-@media screen and (min-width: 1400px) {
-  .product-feature-container .heading-container {
-    padding-bottom: 30px;
-  }
+.product-feature-container .heading-container span {
+  font-size: 26px;
+  font-weight: bold;
+  color: #003d79;
+  text-transform: uppercase;
 }
 .product-feature-container .features-container-underline {
   width: 125px;
-  height: 2px;
+  height: 3px;
   background-color: #003d79;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 18px;
 }
 @media screen and (min-width: 1200px) {
   .product-feature-container .features-container-underline {

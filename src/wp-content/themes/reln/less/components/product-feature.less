@@ -1,67 +1,41 @@
 @import '../utils/utils.less';
 
-/*
-// @screen-xs-min = 420px
-@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
-
-// @screen-sm-min = 768px
-@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
-
-// @screen-md-min = 992px
-@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
-
-// @screen-lg-min = 1200px
-@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
-
-// @screen-xl-min = 1400px
-@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
-
-// @screen-xxl-min = 1600px
-@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
-
-// @screen-xxl-min = 1800px
-@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
-*/
 .product-features {
-	margin-top: -7%;
-	
-	@media @mq-xl-min {
-		margin-top: -6%;
-	}
-	
-	@media @mq-xxl-min {
-		margin-top: -5%;
-	}
+	margin-top: -122px;
+	width: 100%;
+	text-align: center;
 	
 	.product-feature {
-		height: 450px;
-
-		@media @mq-lg-min {
-			height: 510px;
-		}
+		display: inline-block;
+		width: 365px;
+		height: 485px;
+		margin-bottom: 50px;
+		cursor: pointer;
 
 		.product-feature-bg {
 			text-align: center;
 
 			img {
-				width: 100%;
+				width: 350px;
 			}
 
 			.product-feature-fg {
 				position: absolute;
-				left: 50%;
-				top: 90px;
-				width: 84%;
+				width: 306px;
 				height: 307px;
-				margin-left: -42%;
-				background-color: @white;
+				margin-left: 10px;
+				margin: 0 auto;
+				margin-top: -56px;
+				margin-left: 30px;
+				background-color: #fff;
+				z-index: 2;
 
 				img {
-					width: 65%;
-					margin-top: 35px;	
+					width: 185px;
+					margin-top: 25px;
 
 					@media @mq-lg-min {
-						margin-top: 55px;
+						margin-top: 35px;
 					}
 				}
 
@@ -82,25 +56,45 @@
 				}
 
 				a {
-					display: block;
+					display: none;
 					margin-top: 10px;
 					text-align: center;
 					color: @reln-blue;
-					font-size: 13px;
-
-					&:hover {
-						color: @grey-light;
-					}
+					font-size: 13px;				
 				}
 			}
+		}	
+		
+		.overlay {
+			position: relative;
+			display: none;
+			top: -200px;
+			width: 380px;
+			height: 465px;
+			margin-left: -8px;
 		}
-	}
-}
+		
+		&:hover .overlay {
+			display: block;			
+			-webkit-box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);
+			-moz-box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);
+			box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);
+			z-index: 1;
+		}
+		
+		&:hover .product-feature-bg > .product-feature-fg a {
+			display: block;
+			
+			&:hover {
+				color: @grey-light;
+			}
+		}
 
-.corrugate-product,
-.downspout-product,
-.plumbing-product {
-	.product-feature-bg > .product-feature-fg > img {
-		margin-top: 15px;
+	}
+	.product-feature-channel-drains,
+	.product-feature-catch-basins {
+		.product-feature-bg > .product-feature-fg > img {
+			margin-bottom: 37px;
+		}
 	}
 }

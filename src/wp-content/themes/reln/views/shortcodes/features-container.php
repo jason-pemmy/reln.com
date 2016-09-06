@@ -2,10 +2,12 @@
 	<div class="<?php echo $classes; ?>">
 		<div class="product-feature-content">
 			<div class="heading-container">
-				<h3><?php echo $heading; ?></h3>
+				<span><?php echo $heading; ?></span>
 				<div class="features-container-underline"></div>
-			</div>				
+			</div>
 		</div>
 	</div>
 </div>
-{content}
+<div class="product-features">
+	{content}
+</div>

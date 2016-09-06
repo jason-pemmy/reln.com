@@ -79,6 +79,84 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 		));
 		
+		$this->register( 'product-solution', array(
+			'show_settings_on_create' => true,
+			'params' => array(				
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Link',
+					'param_name' => 'link',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+			),
+		));
+		
+		$this->register( 'product-advantage', array(
+			'show_settings_on_create' => true,
+			'params' => array(				
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+			),
+		));
+		
+		$this->register( 'product-info', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+			),
+		));
+		
 		$button_params = array(
 			array(
 				'type' => 'vc_link',
@@ -184,7 +262,61 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 			),
 			'js_view' => 'VcColumnView',
-		) );       
+		) );
+		
+		$this->register( 'product-solution-container', array(
+			'name' => 'Product Solution Container',
+			'base' => 'product_solution_container',
+			'as_parent' => array( 'only' => 'product-solution' ),
+			'is_container' => true,
+			'content_element' => true,
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+			),
+			'js_view' => 'VcColumnView',
+		) );
+		
+		$this->register( 'product-advantages-container', array(
+			'name' => 'Product Advantages Container',
+			'base' => 'product_advantages_container',
+			'as_parent' => array( 'only' => 'product-advantage' ),
+			'is_container' => true,
+			'content_element' => true,
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'type' => 'textfield',
+					'heading' => 'Classes',
+					'param_name' => 'classes',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Tagline',
+					'param_name' => 'tagline',
+				),
+				array(
+					'heading' => 'Background Image',
+					'param_name' => 'images',
+					'type' => 'attach_images',
+				),
+			),
+			'js_view' => 'VcColumnView',
+		) );
 	}
 	public function register( $tag, $vc_map = array() ) {
 		add_shortcode( $tag, array( &$this, strtolower( str_replace( '-', '_', $tag ) ) ) );
@@ -246,6 +378,53 @@ class TBK_Shortcodes extends Base_Factory {
 
 		return TBK_Render::shortcode_view( 'product-feature', $atts );
 		
+	}
+	
+	function product_solution( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,			
+			'heading' => null,
+			'link' => null,
+			'classes' => null,
+		), $atts );
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-solution' );
+		}		
+
+		return TBK_Render::shortcode_view( 'product-solution', $atts );
+		
+	}
+	
+	function product_advantage( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,			
+			'heading' => null,
+			'copy' => null,
+			'classes' => null,
+		), $atts );
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-advantage' );
+		}		
+
+		return TBK_Render::shortcode_view( 'product-advantage', $atts );
+		
+	}
+	
+	function product_info( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,
+			'heading' => null,
+			'copy' => null,
+			'classes' => null,
+		), $atts );
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-info' );
+		}
+
+		return TBK_Render::shortcode_view( 'product-info', $atts );
 	}
 	
 	function phone() {
@@ -361,6 +540,28 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 			$atts = shortcode_atts( array(
 				'classes' => null,
 				'heading' => null,
+			), $atts );
+			return parent::content( $atts, $content, $view );
+		}
+	}
+	
+	class WPBakeryShortCode_Product_Solution_Container extends TBKBakeryContainer {
+		protected function content( $atts = null, $content = null, $view = 'product-solution-container' ) {
+			$atts = shortcode_atts( array(
+				'classes' => null,
+				'heading' => null,
+			), $atts );
+			return parent::content( $atts, $content, $view );
+		}
+	}
+	
+	class WPBakeryShortCode_Product_Advantages_Container extends TBKBakeryContainer {
+		protected function content( $atts = null, $content = null, $view = 'product-advantages-container' ) {
+			$atts = shortcode_atts( array(
+				'classes' => null,
+				'heading' => null,
+				'tagline' => null,
+				'image' => null,
 			), $atts );
 			return parent::content( $atts, $content, $view );
 		}

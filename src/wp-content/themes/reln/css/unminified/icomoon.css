@@ -19,15 +19,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-check:before {
-  content: "\e918";
-}
-.icon-chevron-left:before {
-  content: "\e916";
-}
-.icon-chevron-right:before {
-  content: "\e917";
-}
+
 .icon-search:before {
   content: "\e915";
 }
@@ -37,60 +29,7 @@
 .icon-close:before {
   content: "\e913";
 }
-.icon-car:before {
-  content: "\e902";
-}
-.icon-circle:before {
-  content: "\e903";
-}
-.icon-city-tower:before {
-  content: "\e904";
-}
-.icon-diamond-bullet:before {
-  content: "\e905";
-}
-.icon-fair-trade:before {
-  content: "\e906";
-}
-.icon-group-people:before {
-  content: "\e907";
-}
-.icon-heartbeat:before {
-  content: "\e908";
-}
-.icon-hydro-tower:before {
-  content: "\e909";
-}
-.icon-map-marker:before {
-  content: "\e90a";
-}
-.icon-medical-case:before {
-  content: "\e90b";
-}
-.icon-money-hand:before {
-  content: "\e90c";
-}
-.icon-oil-drill:before {
-  content: "\e90d";
-}
-.icon-store-front:before {
-  content: "\e90e";
-}
-.icon-sun:before {
-  content: "\e90f";
-}
-.icon-umbrella:before {
-  content: "\e910";
-}
-.icon-underline-money:before {
-  content: "\e911";
-}
-.icon-windmill-blades:before {
-  content: "\e912";
-}
-.icon-shield-check:before {
-  content: "\e901";
-}
-.icon-arrow-right:before {
-  content: "\e900";
+
+.icon-play3:before {
+  content: "\ea1c";
 }

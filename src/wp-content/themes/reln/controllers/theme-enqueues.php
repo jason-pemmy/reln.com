@@ -70,6 +70,11 @@ class Theme_Enqueues extends Base_Factory {
 					'hero-banner',
 					'features-container',
 					'product-feature',
+					'product-info',
+					'product-solution-container',
+					'product-solution',
+					'product-advantages-container',
+					'product-advantage',
 				));
 
 				// pages
