@@ -36,6 +36,14 @@
   line-height: 0.9;
   letter-spacing: -0.8px;
 }
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .underline-accent-container {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  top: 100px;
+  left: 120px;
+  background-color: #003d79;
+}
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-link {
   float: left;
   padding-left: 20px;
