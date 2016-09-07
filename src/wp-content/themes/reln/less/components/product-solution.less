@@ -21,49 +21,60 @@
 		.product-solution-bg {			
 
 			.product-solution-fg {
+				position: relative;
+				height: 350px;
 				padding-top: 75px;
-				padding-bottom: 75px;								
-				text-align: left;
-				z-index: 20;
+				padding-bottom: 75px;
+				text-align: left;			
 				
 				.product-solution-img {
 					float: left;
 					padding-left: 20px;
 				}
 				
-				.product-solution-header {
-					float: left;
-					width: 200px;
-					padding-left: 20px;
-					padding-top: 25px;
-					color: #0081bc;
-					font-size: 22px;
-					font-weight: bold;
-					line-height: 0.9;
-					letter-spacing: -0.8px;
-				}
-				
-				.underline-accent-container {
-					position: relative;
-					width: 200px;
-					height: 1px;
-					top: 100px;
-					left: 120px;
-					background-color: @reln-blue;
-				}
-				
-				.product-solution-link {
-					float: left;
-					padding-left: 20px;
-					padding-top: 25px;
-					color: #0081bc;
-					font-size: 15px;
+				.product-solution-info-link {
+					margin: 0;
+					position: absolute;
+					top: 35%;
+					left: 220px;
+					transform: translate(0, -35%);
 					
-					span {
-						padding-left: 8px;
-    					font-size: 12px;
+					.product-solution-header {
+						float: left;
+						width: 200px;
+						padding-left: 20px;
+						padding-top: 25px;
+						color: #0081bc;
+						font-size: 22px;
+						font-weight: bold;
+						line-height: 0.9;
+						letter-spacing: -0.8px;
 					}
-				}
+
+					.underline-accent-container {
+						float: left;
+						width: 200px;
+						margin-top: 20px;
+						margin-bottom: 20px;
+						margin-left: -100px;
+						height: 1px;
+						//background-color: @reln-blue;
+						background: linear-gradient(90deg, @white 50%, #0081bc 50%);
+					}
+
+					.product-solution-link {
+						float: left;
+						padding-left: 20px;
+						padding-top: 0;
+						color: #0081bc;
+						font-size: 15px;
+
+						span {
+							padding-left: 8px;
+							font-size: 12px;
+						}
+					}	
+				}				
 			}
 		}		
 		
@@ -73,8 +84,8 @@
 			box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
-			top: -150px;
-			width: 540px;
+			top: -355px;
+			width: 535px;
 			height: 355px;
 			border-style: none;
 			margin-left: -50px;			

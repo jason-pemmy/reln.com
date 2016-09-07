@@ -20,3 +20,36 @@
 // @screen-xxl-min = 1800px
 @mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
 */
+.product-advantage-container {
+  width: 100%;
+  height: auto;
+  margin-top: 175px;
+}
+.product-advantage-container .heading-container {
+  width: 100%;
+  padding-top: 125px;
+  text-align: center;
+}
+.product-advantage-container .heading-container .product-advantage-header {
+  font-size: 45px;
+  color: #003d79;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.product-advantage-container .heading-container .product-advantage-tagline {
+  color: #003d79;
+  font-size: 35px;
+}
+.product-advantage-container .heading-container .heading-container-underline {
+  width: 160px;
+  height: 3px;
+  background-color: #003d79;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .product-advantage-container .heading-container .heading-container-underline {
+    margin-top: 20px;
+  }
+}

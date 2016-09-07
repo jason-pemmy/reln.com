@@ -311,7 +311,7 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 				array(
 					'heading' => 'Background Image',
-					'param_name' => 'images',
+					'param_name' => 'image',
 					'type' => 'attach_images',
 				),
 			),
@@ -563,6 +563,11 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 				'tagline' => null,
 				'image' => null,
 			), $atts );
+			
+			if( ! empty( $atts['image'] ) ) {
+				$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'product-advantages-container' );
+			}
+			
 			return parent::content( $atts, $content, $view );
 		}
 	}

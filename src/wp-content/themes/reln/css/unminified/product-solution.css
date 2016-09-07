@@ -16,16 +16,24 @@
   background-color: #fff;
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg {
+  position: relative;
+  height: 350px;
   padding-top: 75px;
   padding-bottom: 75px;
   text-align: left;
-  z-index: 20;
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-img {
   float: left;
   padding-left: 20px;
 }
-.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-header {
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 220px;
+  transform: translate(0, -35%);
+}
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-header {
   float: left;
   width: 200px;
   padding-left: 20px;
@@ -36,22 +44,23 @@
   line-height: 0.9;
   letter-spacing: -0.8px;
 }
-.product-solutions .product-solution .product-solution-bg .product-solution-fg .underline-accent-container {
-  position: relative;
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .underline-accent-container {
+  float: left;
   width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -100px;
   height: 1px;
-  top: 100px;
-  left: 120px;
-  background-color: #003d79;
+  background: linear-gradient(90deg, #fff 50%, #0081bc 50%);
 }
-.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-link {
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link {
   float: left;
   padding-left: 20px;
-  padding-top: 25px;
+  padding-top: 0;
   color: #0081bc;
   font-size: 15px;
 }
-.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-link span {
+.product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link span {
   padding-left: 8px;
   font-size: 12px;
 }
@@ -61,8 +70,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  top: -150px;
-  width: 540px;
+  top: -355px;
+  width: 535px;
   height: 355px;
   border-style: none;
   margin-left: -50px;

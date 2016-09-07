@@ -22,3 +22,40 @@
 // @screen-xxl-min = 1800px
 @mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
 */ 
+
+.product-advantage-container {
+	width: 100%;
+	height: auto;
+	margin-top: 175px;
+	
+	.heading-container {
+		width: 100%;
+		padding-top: 125px;
+		text-align: center;
+		
+		.product-advantage-header {
+			font-size: 45px;
+			color: @reln-blue;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		
+		.product-advantage-tagline {
+			color: @reln-blue;
+			font-size: 35px;
+		}
+		
+		.heading-container-underline {
+			width: 160px;
+			height: 3px;
+			background-color: @reln-blue;
+			margin: 0 auto;
+			margin-top: 25px;
+			margin-bottom: 30px;		
+
+			@media @mq-lg-min {
+				margin-top: 20px;
+			}
+		}
+	}
+}
