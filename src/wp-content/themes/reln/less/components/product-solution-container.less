@@ -42,10 +42,14 @@
 		}
 		
 		span {
-			font-size: 36px;
+			font-size: 30px;
 			font-weight: bold;
 			color: @reln-blue;
 			letter-spacing: -2px;
+			
+			@media @mq-xs-min {
+				font-size: 36px;
+			}
 		}
 	}
 }

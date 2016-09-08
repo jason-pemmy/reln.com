@@ -40,8 +40,13 @@
   }
 }
 .product-solution-container .heading-container span {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   color: #003d79;
   letter-spacing: -2px;
+}
+@media screen and (min-width: 480px) {
+  .product-solution-container .heading-container span {
+    font-size: 36px;
+  }
 }

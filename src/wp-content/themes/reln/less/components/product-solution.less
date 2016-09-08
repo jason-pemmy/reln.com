@@ -5,53 +5,91 @@
 	text-align: center;
 	
 	.product-solution.odd-color {
-		width: 465px;
+		width: 310px;
 		height: 350px;
 		background-color: #fbfafa;
+		
+		@media @mq-xs-min {
+			width: 410px;
+		}
+		
+		@media @mq-sm-min {
+			width: 465px;
+		}
 	}
 	
 	.product-solution {
 		display: inline-block;
-		width: 465px;
+		width: 310px;
 		height: 350px;
 		margin-top:	-10px;
 		cursor: pointer;
 		background-color: @white;
+		
+		@media @mq-xs-min {
+			width: 410px;
+		}
+		
+		@media @mq-sm-min {
+			width: 465px;
+		}
+		
 		
 		.product-solution-bg {			
 
 			.product-solution-fg {
 				position: relative;
 				height: 350px;
-				padding-top: 75px;
+				padding-top: 20px;
 				padding-bottom: 75px;
-				text-align: left;			
+				text-align: center;		
+				
+				@media @mq-xs-min {
+					padding-top: 75px;
+					text-align: left;		
+				}
 				
 				.product-solution-img {
-					float: left;
-					padding-left: 20px;
+					float: none;
+					padding-left: 0;
+					
+					@media @mq-xs-min {
+						float: left;
+						padding-left: 20px;
+					}
 				}
 				
 				.product-solution-info-link {
 					margin: 0;
-					position: absolute;
-					top: 35%;
-					left: 220px;
-					transform: translate(0, -35%);
+					position:relative;					
+					
+					@media @mq-xs-min {
+						position: absolute;
+						top: 35%;
+						left: 220px;
+						transform: translate(0, -35%);
+					}
 					
 					.product-solution-header {
-						float: left;
+						float: none;
 						width: 200px;
-						padding-left: 20px;
+						margin: 0 auto;
+						padding-left: 0;
 						padding-top: 25px;
 						color: #0081bc;
 						font-size: 22px;
 						font-weight: bold;
 						line-height: 0.9;
 						letter-spacing: -0.8px;
+						
+						@media @mq-xs-min {
+							float: left;
+							padding-left: 20px;
+						}
 					}
 
 					.underline-accent-container {
+						display: none;
 						float: left;
 						width: 200px;
 						margin-top: 20px;
@@ -60,15 +98,25 @@
 						height: 1px;
 						//background-color: @reln-blue;
 						background: linear-gradient(90deg, @white 50%, #0081bc 50%);
+						
+						@media @mq-xs-min {
+							display: block;
+						}
 					}
 
 					.product-solution-link {
-						float: left;
-						padding-left: 20px;
-						padding-top: 0;
+						float: none;
+						padding-left: 0;
+						padding-top: 15px;
 						color: #0081bc;
 						font-size: 15px;
-
+						
+						@media @mq-xs-min {
+							float: left;
+							padding-left: 20px;
+							padding-top: 0;
+						}
+						
 						span {
 							padding-left: 8px;
 							font-size: 12px;
@@ -85,10 +133,10 @@
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
 			top: -355px;
-			width: 535px;
+			width: 310px;
 			height: 355px;
 			border-style: none;
-			margin-left: -50px;			
+			margin-left: 0;			
 			border-left: 50px;
 			border-left-style: solid;
 			border-left-color: @white;
@@ -98,6 +146,15 @@
 			border-bottom: 10px;
 			border-bottom-style: solid;
 			border-bottom-color: @white;
+			
+			@media @mq-xs-min {
+				width: 410px;	
+			}
+			
+			@media @mq-sm-min {
+				width: 535px;	
+				margin-left: -50px;			
+			}
 		}
 		
 		&:hover {

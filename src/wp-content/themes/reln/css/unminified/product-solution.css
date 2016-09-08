@@ -3,40 +3,78 @@
   text-align: center;
 }
 .product-solutions .product-solution.odd-color {
-  width: 465px;
+  width: 310px;
   height: 350px;
   background-color: #fbfafa;
 }
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution.odd-color {
+    width: 410px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-solutions .product-solution.odd-color {
+    width: 465px;
+  }
+}
 .product-solutions .product-solution {
   display: inline-block;
-  width: 465px;
+  width: 310px;
   height: 350px;
   margin-top: -10px;
   cursor: pointer;
   background-color: #fff;
 }
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution {
+    width: 410px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-solutions .product-solution {
+    width: 465px;
+  }
+}
 .product-solutions .product-solution .product-solution-bg .product-solution-fg {
   position: relative;
   height: 350px;
-  padding-top: 75px;
+  padding-top: 20px;
   padding-bottom: 75px;
-  text-align: left;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg {
+    padding-top: 75px;
+    text-align: left;
+  }
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-img {
-  float: left;
-  padding-left: 20px;
+  float: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-img {
+    float: left;
+    padding-left: 20px;
+  }
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link {
   margin: 0;
-  position: absolute;
-  top: 35%;
-  left: 220px;
-  transform: translate(0, -35%);
+  position: relative;
+}
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link {
+    position: absolute;
+    top: 35%;
+    left: 220px;
+    transform: translate(0, -35%);
+  }
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-header {
-  float: left;
+  float: none;
   width: 200px;
-  padding-left: 20px;
+  margin: 0 auto;
+  padding-left: 0;
   padding-top: 25px;
   color: #0081bc;
   font-size: 22px;
@@ -44,7 +82,14 @@
   line-height: 0.9;
   letter-spacing: -0.8px;
 }
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-header {
+    float: left;
+    padding-left: 20px;
+  }
+}
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .underline-accent-container {
+  display: none;
   float: left;
   width: 200px;
   margin-top: 20px;
@@ -53,12 +98,24 @@
   height: 1px;
   background: linear-gradient(90deg, #fff 50%, #0081bc 50%);
 }
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .underline-accent-container {
+    display: block;
+  }
+}
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link {
-  float: left;
-  padding-left: 20px;
-  padding-top: 0;
+  float: none;
+  padding-left: 0;
+  padding-top: 15px;
   color: #0081bc;
   font-size: 15px;
+}
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link {
+    float: left;
+    padding-left: 20px;
+    padding-top: 0;
+  }
 }
 .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link span {
   padding-left: 8px;
@@ -71,10 +128,10 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   top: -355px;
-  width: 535px;
+  width: 310px;
   height: 355px;
   border-style: none;
-  margin-left: -50px;
+  margin-left: 0;
   border-left: 50px;
   border-left-style: solid;
   border-left-color: #fff;
@@ -84,6 +141,17 @@
   border-bottom: 10px;
   border-bottom-style: solid;
   border-bottom-color: #fff;
+}
+@media screen and (min-width: 480px) {
+  .product-solutions .product-solution .overlay {
+    width: 410px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-solutions .product-solution .overlay {
+    width: 535px;
+    margin-left: -50px;
+  }
 }
 .product-solutions .product-solution:hover {
   background-color: #fff;
