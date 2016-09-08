@@ -1,4 +1,4 @@
-<!--<div class="product-advantage-container" style="background:url('<?php echo $image; ?>')">
+<div class="product-advantage-container" style="background:url('<?php echo $image; ?>')">
 	<div class="<?php echo $classes; ?>">
 		<div class="product-advantage-content">
 			<div class="heading-container">				
@@ -8,7 +8,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="product-advantages">
+		{content}
+	</div>
 </div>
-<div class="product-advantages">
-	{content}
-</div>-->

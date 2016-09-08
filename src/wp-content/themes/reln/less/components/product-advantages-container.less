@@ -1,48 +1,50 @@
 @import '../utils/utils.less';
 
-/*
-// @screen-xs-min = 420px
-@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
-
-// @screen-sm-min = 768px
-@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
-
-// @screen-md-min = 992px
-@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
-
-// @screen-lg-min = 1200px
-@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
-
-// @screen-xl-min = 1400px
-@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
-
-// @screen-xxl-min = 1600px
-@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
-
-// @screen-xxl-min = 1800px
-@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
-*/ 
-
 .product-advantage-container {
 	width: 100%;
 	height: auto;
-	margin-top: 175px;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	
+	@media @mq-xs-min {
+		margin-top: 175px;
+	}
 	
 	.heading-container {
 		width: 100%;
-		padding-top: 125px;
+		padding-top: 50px;
 		text-align: center;
 		
+		@media @mq-xs-min {
+			padding-top: 125px;
+		}
+		
 		.product-advantage-header {
-			font-size: 45px;
+			font-size: 30px;
 			color: @reln-blue;
 			text-transform: uppercase;
 			font-weight: bold;
+			
+			@media @mq-xs-min {
+				font-size: 35px;
+			}
+			
+			@media @mq-sm-min {
+				font-size: 45px;
+			}
 		}
 		
 		.product-advantage-tagline {
 			color: @reln-blue;
-			font-size: 35px;
+			font-size: 25px;
+			
+			@media @mq-xs-min {
+				font-size: 30px;
+			}
+			
+			@media @mq-sm-min {
+				font-size: 35px;
+			}
 		}
 		
 		.heading-container-underline {

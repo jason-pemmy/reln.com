@@ -34,7 +34,36 @@
 							<div class="col-xs-12 col-sm-6 col-md-3 footer-nav-container">
 								<h4>Where to Buy:</h4>
 								<div class="where-to-buy">
-									logos	
+									<div class="footer-logo-container">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/canadian-tire-footer.png" alt="canadian tire logo"/>
+										</a>	
+									</div>									
+									<div class="footer-logo-container">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/home-depot-footer.png" alt="home depot logo"/>
+										</a>
+									</div>
+									<div class="footer-logo-container">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/coop-footer.png" alt="co-op logo"/>
+										</a>
+									</div>
+									<div class="footer-logo-container">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/reno-depot-footer.png" alt="reno depot"/>
+										</a>
+									</div>
+									<div class="footer-logo-container rona-logo">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/rona.png" alt="rona logo"/>
+										</a>
+									</div>
+									<div class="footer-logo-container">
+										<a href="#" >
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowes.png" alt="lowes logo"/>
+										</a>
+									</div>
 								</div>							
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-3 footer-nav-container">

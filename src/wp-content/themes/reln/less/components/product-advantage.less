@@ -22,3 +22,84 @@
 // @screen-xxl-min = 1800px
 @mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
 */ 
+
+.product-advantages {
+	width: 100%;
+	text-align: center;	
+	
+	@media @mq-sm-min {
+		padding-left: 10%;
+		padding-right: 10%;	
+	}
+	
+	.product-advantage {
+		display: inline-block;		
+		position: inherit;
+		width: 296px;
+		height: 430px;				
+		margin-bottom: 20px;
+
+		@media @mq-xs-min {
+			width: 415px;
+			height: 490px;
+		}
+
+		@media @mq-sm-min {
+			width: 420px;
+			margin-left: 20px;
+		}
+		
+		.product-advantage-image {
+			border-color: #fbfafa;
+			border-width: 1px;
+			border-style: solid;
+			
+			img {
+				width: 292px;
+				
+				@media @mq-xs-min {
+					width: 420px;
+				}
+			}
+		}
+
+		.product-advantage-copy {
+			position: absolute;
+			height: 200px;
+			width: 295px;			
+			background-color: #fbfafa;
+			
+			@media @mq-xs-min {
+				width: 420px;
+			}
+			
+			.product-advantage-heading {									
+				display: block;
+				position: relative;
+				padding-top: 50px;
+				color: @reln-blue;
+				font-size: 20px;
+				font-weight: bold;
+				
+				@media @mq-xs-min {
+					margin-left: 40px;
+					margin-right: 40px;
+				}
+			}
+
+			.product-advantage-description {
+				display: block;
+				position: relative;
+				padding-bottom: 40px;
+				color: @black;
+				font-size: 15px;
+				
+				@media @mq-xs-min {
+					margin-top: 20px;
+					margin-left: 40px;
+					margin-right: 40px;
+				}
+			}
+		}
+	}	
+}

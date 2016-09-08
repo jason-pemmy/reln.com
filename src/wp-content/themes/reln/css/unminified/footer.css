@@ -60,17 +60,17 @@
   padding-top: 10px;
   text-align: center;
   font-size: 1.2em;
+  opacity: 0.7;
 }
 .page-footer .navbar-fixed-bottom .footer-sm-link-container a:hover,
 .page-footer .navbar-fixed-bottom .footer-sm-link-container a:focus {
-  color: #fff;
+  opacity: 1;
 }
 .page-footer .navbar-fixed-bottom .where-to-buy {
   height: 100px;
   width: 275px;
   margin: 0 auto;
   margin-bottom: 20px;
-  background-color: #337ab7;
 }
 @media screen and (min-width: 768px) {
   .page-footer .navbar-fixed-bottom .where-to-buy {
@@ -81,6 +81,18 @@
   .page-footer .navbar-fixed-bottom .where-to-buy {
     width: 95%;
   }
+}
+.page-footer .navbar-fixed-bottom .where-to-buy .footer-logo-container {
+  float: left;
+  margin-right: 20px;
+  height: 50px;
+  opacity: 0.7;
+}
+.page-footer .navbar-fixed-bottom .where-to-buy .footer-logo-container:hover {
+  opacity: 1;
+}
+.page-footer .navbar-fixed-bottom .where-to-buy .footer-logo-container.rona-logo {
+  padding-top: 10px;
 }
 .page-footer .navbar-fixed-bottom .whats-happening {
   width: 90%;

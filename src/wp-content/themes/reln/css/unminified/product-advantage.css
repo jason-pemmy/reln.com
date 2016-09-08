@@ -20,3 +20,84 @@
 // @screen-xxl-min = 1800px
 @mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
 */
+.product-advantages {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .product-advantages {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.product-advantages .product-advantage {
+  display: inline-block;
+  position: inherit;
+  width: 296px;
+  height: 430px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .product-advantages .product-advantage {
+    width: 415px;
+    height: 490px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-advantages .product-advantage {
+    width: 420px;
+    margin-left: 20px;
+  }
+}
+.product-advantages .product-advantage .product-advantage-image {
+  border-color: #fbfafa;
+  border-width: 1px;
+  border-style: solid;
+}
+.product-advantages .product-advantage .product-advantage-image img {
+  width: 292px;
+}
+@media screen and (min-width: 480px) {
+  .product-advantages .product-advantage .product-advantage-image img {
+    width: 420px;
+  }
+}
+.product-advantages .product-advantage .product-advantage-copy {
+  position: absolute;
+  height: 200px;
+  width: 295px;
+  background-color: #fbfafa;
+}
+@media screen and (min-width: 480px) {
+  .product-advantages .product-advantage .product-advantage-copy {
+    width: 420px;
+  }
+}
+.product-advantages .product-advantage .product-advantage-copy .product-advantage-heading {
+  display: block;
+  position: relative;
+  padding-top: 50px;
+  color: #003d79;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+  .product-advantages .product-advantage .product-advantage-copy .product-advantage-heading {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+.product-advantages .product-advantage .product-advantage-copy .product-advantage-description {
+  display: block;
+  position: relative;
+  padding-bottom: 40px;
+  color: #000;
+  font-size: 15px;
+}
+@media screen and (min-width: 480px) {
+  .product-advantages .product-advantage .product-advantage-copy .product-advantage-description {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
