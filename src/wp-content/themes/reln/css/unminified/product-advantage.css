@@ -51,7 +51,7 @@
 }
 .product-advantages .product-advantage .product-advantage-image {
   border-color: #fbfafa;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
 }
 .product-advantages .product-advantage .product-advantage-image img {
@@ -59,7 +59,7 @@
 }
 @media screen and (min-width: 480px) {
   .product-advantages .product-advantage .product-advantage-image img {
-    width: 420px;
+    width: 410px;
   }
 }
 .product-advantages .product-advantage .product-advantage-copy {

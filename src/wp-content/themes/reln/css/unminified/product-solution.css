@@ -153,6 +153,18 @@
     margin-left: -50px;
   }
 }
+@media screen and (min-width: 992px) {
+  .product-solutions .product-solution .overlay {
+    width: 500px;
+    margin-left: -18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-solutions .product-solution .overlay {
+    width: 535px;
+    margin-left: -50px;
+  }
+}
 .product-solutions .product-solution:hover {
   background-color: #fff;
 }

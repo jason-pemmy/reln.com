@@ -157,6 +157,48 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 		));
 		
+		$this->register( 'reln-way-content', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Heading',
+					'param_name' => 'heading',
+				),
+				array(
+					'heading' => 'Logo',
+					'param_name' => 'logo',
+					'type' => 'attach_image',
+				),
+                array(
+					'type' => 'textfield',
+					'heading' => 'Copy',
+					'param_name' => 'copy',
+				),
+			),
+		));
+		
+		$this->register( 'checklist-item', array(
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'heading' => 'Image',
+					'param_name' => 'image',
+					'type' => 'attach_image',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Item',
+					'param_name' => 'item',
+				),
+			),
+		));
+		
 		$button_params = array(
 			array(
 				'type' => 'vc_link',
@@ -317,6 +359,38 @@ class TBK_Shortcodes extends Base_Factory {
 			),
 			'js_view' => 'VcColumnView',
 		) );
+		
+		$this->register( 'checklist-cta-container', array(
+			'name' => 'Checklist CTA Container',
+			'base' => 'checklist_cta_container',
+			'as_parent' => array( 'only' => 'checklist-item' ),
+			'is_container' => true,
+			'content_element' => true,
+			'show_settings_on_create' => true,
+			'params' => array(
+				array(
+					'type' => 'textfield',
+					'heading' => 'Tagline',
+					'param_name' => 'tagline',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'CTA Button Text',
+					'param_name' => 'button_text',
+				),
+				array(
+					'heading' => 'Image Left',
+					'param_name' => 'image_left',
+					'type' => 'attach_images',
+				),
+				array(
+					'heading' => 'Image Right',
+					'param_name' => 'image_right',
+					'type' => 'attach_images',
+				),
+			),
+			'js_view' => 'VcColumnView',
+		) );
 	}
 	public function register( $tag, $vc_map = array() ) {
 		add_shortcode( $tag, array( &$this, strtolower( str_replace( '-', '_', $tag ) ) ) );
@@ -377,6 +451,40 @@ class TBK_Shortcodes extends Base_Factory {
 		}
 
 		return TBK_Render::shortcode_view( 'product-feature', $atts );
+		
+	}
+	
+	function reln_way_content( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,
+			'logo' => null,
+			'heading' => null,
+			'copy' => null,
+		), $atts );
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'reln-way-content' );
+		}
+		
+		if( ! empty( $atts['logo'] ) ) {			
+			$atts['logo'] = TBK_Theme::get_attachment_image_url( $atts['logo'], 'reln-way-content' );
+		}
+
+		return TBK_Render::shortcode_view( 'reln-way-content', $atts );
+		
+	}
+	
+	function checklist_item( $atts ) {
+		$atts = shortcode_atts( array(
+			'image' => null,
+			'item' => null,
+		), $atts );
+
+		if( ! empty( $atts['image'] ) ) {
+			$atts['image'] = TBK_Theme::get_attachment_image_url( $atts['image'], 'checklist-item' );
+		}
+
+		return TBK_Render::shortcode_view( 'checklist-item', $atts );
 		
 	}
 	
@@ -571,4 +679,25 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 			return parent::content( $atts, $content, $view );
 		}
 	}
+	
+	class WPBakeryShortCode_Checklist_Cta_Container extends TBKBakeryContainer {
+		protected function content( $atts = null, $content = null, $view = 'checklist-cta-container' ) {
+			$atts = shortcode_atts( array(
+				'heading' => null,
+				'button-text' => null,
+				'image-left' => null,
+				'image-right' => null,
+			), $atts );
+			
+			if( ! empty( $atts['image-left'] ) ) {
+				$atts['image-left'] = TBK_Theme::get_attachment_image_url( $atts['image-left'], 'checklist-cta-container' );
+			}
+			
+			if( ! empty( $atts['image-right'] ) ) {
+				$atts['image-right'] = TBK_Theme::get_attachment_image_url( $atts['image-right'], 'checklist-cta-container' );
+			}
+			
+			return parent::content( $atts, $content, $view );
+		}
+	}	
 }
