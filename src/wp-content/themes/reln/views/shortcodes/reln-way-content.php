@@ -4,7 +4,10 @@
 	</div>	
 	<div class="reln-way-heading"><?php echo $heading; ?></div>
 	<div class="reln-way-tagline">
-		<img class="" src="<?php echo $logo; ?>" alt=""/>
+		<div class="tagline-superscript-the">THE</div>
+		<div class="reln-way-logo"><img src="<?php echo $logo; ?>" alt=""/></div>
+		<div class="tagline-way">Way</div>
 	</div>
+	<div class="reln-way-underline"></div>
 	<div class="reln-way-copy"><?php echo $copy; ?></div>
 </div>

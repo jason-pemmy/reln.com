@@ -1,0 +1,122 @@
+@import '../utils/utils.less';
+
+/*
+// @screen-xs-min = 420px
+@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
+
+// @screen-sm-min = 768px
+@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
+
+// @screen-md-min = 992px
+@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
+
+// @screen-lg-min = 1200px
+@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
+
+// @screen-xl-min = 1400px
+@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
+
+// @screen-xxl-min = 1600px
+@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
+
+// @screen-xxl-min = 1800px
+@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
+*/ 
+
+.reln-way-content {	
+	.reln-way-image {
+		width: 62px;
+		margin: 0 auto;
+	}
+	
+	.reln-way-heading {
+		margin-top: 24px;
+		text-align: center;
+		font-size: 21px;
+		font-weight: bold;
+		color: @black;
+		
+		@media @mq-xs-min {
+			font-size: 28px;
+		}
+	}
+	
+	.reln-way-tagline {		
+		width: 310px;
+		height: 55px;
+		margin: 0 auto;
+		margin-top: 10px;
+		
+		@media @mq-xs-min {
+			width: 345px;
+		}
+		
+		.reln-way-logo {
+			float: left;
+			
+			img {
+				width: 175px;
+				
+				@media @mq-xs-min {
+					width: 100%;
+				}
+			}
+			
+		}
+		
+		.tagline-superscript-the {
+			float: left;
+			margin-right: 5px;
+			margin-top: -5px;
+			vertical-align: super;
+			color: @green;
+			font-size: 18px;
+			font-weight: bold;									
+		}
+		
+		.tagline-way {	
+			float: left;
+			margin-top: -14px;
+			margin-left: 5px;
+			color: @green;
+			font-size: 35px;
+			font-family: "Times New Roman", Georgia, Serif;
+			
+			@media @mq-xs-min {
+				font-size: 45px;
+			}
+		}
+	}
+	
+	.reln-way-underline {
+		width: 50px;
+		height: 3px;
+		background-color: @reln-blue;
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	
+	.reln-way-copy {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		text-align: center; 
+		
+		@media @mq-sm-min {
+			width: 80%;
+		}
+		
+		@media @mq-md-min {
+			width: 70%;
+		}
+		
+		@media @mq-lg-min {
+			width: 50%;
+		}
+		
+		@media @mq-xl-min {
+			width: 38%;
+		}
+	}
+}

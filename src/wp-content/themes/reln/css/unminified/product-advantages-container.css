@@ -2,9 +2,9 @@
   width: 100%;
   height: auto;
   margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 992px) {
   .product-advantage-container {
     margin-top: 175px;
     padding-bottom: 125px;

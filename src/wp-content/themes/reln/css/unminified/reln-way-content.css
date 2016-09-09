@@ -1,0 +1,116 @@
+/*
+// @screen-xs-min = 420px
+@mq-xs-min: ~"screen and (min-width: @{screen-xs-min})";
+
+// @screen-sm-min = 768px
+@mq-sm-min: ~"screen and (min-width: @{screen-sm-min})";
+
+// @screen-md-min = 992px
+@mq-md-min: ~"screen and (min-width: @{screen-md-min})";
+
+// @screen-lg-min = 1200px
+@mq-lg-min: ~"screen and (min-width: @{screen-lg-min})";
+
+// @screen-xl-min = 1400px
+@mq-xl-min: ~"screen and (min-width: @{screen-xl-min})";
+
+// @screen-xxl-min = 1600px
+@mq-xxl-min: ~"screen and (min-width: @{screen-xxl-min})";
+
+// @screen-xxl-min = 1800px
+@mq-xxxl-min: ~"screen and (min-width: @{screen-xxxl-min})";
+*/
+.reln-way-content .reln-way-image {
+  width: 62px;
+  margin: 0 auto;
+}
+.reln-way-content .reln-way-heading {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: #000;
+}
+@media screen and (min-width: 480px) {
+  .reln-way-content .reln-way-heading {
+    font-size: 28px;
+  }
+}
+.reln-way-content .reln-way-tagline {
+  width: 310px;
+  height: 55px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+@media screen and (min-width: 480px) {
+  .reln-way-content .reln-way-tagline {
+    width: 345px;
+  }
+}
+.reln-way-content .reln-way-tagline .reln-way-logo {
+  float: left;
+}
+.reln-way-content .reln-way-tagline .reln-way-logo img {
+  width: 175px;
+}
+@media screen and (min-width: 480px) {
+  .reln-way-content .reln-way-tagline .reln-way-logo img {
+    width: 100%;
+  }
+}
+.reln-way-content .reln-way-tagline .tagline-superscript-the {
+  float: left;
+  margin-right: 5px;
+  margin-top: -5px;
+  vertical-align: super;
+  color: #077962;
+  font-size: 18px;
+  font-weight: bold;
+}
+.reln-way-content .reln-way-tagline .tagline-way {
+  float: left;
+  margin-top: -14px;
+  margin-left: 5px;
+  color: #077962;
+  font-size: 35px;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+@media screen and (min-width: 480px) {
+  .reln-way-content .reln-way-tagline .tagline-way {
+    font-size: 45px;
+  }
+}
+.reln-way-content .reln-way-underline {
+  width: 50px;
+  height: 3px;
+  background-color: #003d79;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.reln-way-content .reln-way-copy {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .reln-way-content .reln-way-copy {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .reln-way-content .reln-way-copy {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reln-way-content .reln-way-copy {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .reln-way-content .reln-way-copy {
+    width: 38%;
+  }
+}

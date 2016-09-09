@@ -194,7 +194,7 @@ class TBK_Shortcodes extends Base_Factory {
 				array(
 					'type' => 'textfield',
 					'heading' => 'Item',
-					'param_name' => 'item',
+					'param_name' => 'list_item',
 				),
 			),
 		));
@@ -477,7 +477,7 @@ class TBK_Shortcodes extends Base_Factory {
 	function checklist_item( $atts ) {
 		$atts = shortcode_atts( array(
 			'image' => null,
-			'item' => null,
+			'list_item' => null,
 		), $atts );
 
 		if( ! empty( $atts['image'] ) ) {
@@ -683,18 +683,18 @@ if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
 	class WPBakeryShortCode_Checklist_Cta_Container extends TBKBakeryContainer {
 		protected function content( $atts = null, $content = null, $view = 'checklist-cta-container' ) {
 			$atts = shortcode_atts( array(
-				'heading' => null,
-				'button-text' => null,
-				'image-left' => null,
-				'image-right' => null,
+				'tagline' => null,
+				'button_text' => null,
+				'image_left' => null,
+				'image_right' => null,
 			), $atts );
 			
-			if( ! empty( $atts['image-left'] ) ) {
-				$atts['image-left'] = TBK_Theme::get_attachment_image_url( $atts['image-left'], 'checklist-cta-container' );
+			if( ! empty( $atts['image_left'] ) ) {
+				$atts['image_left'] = TBK_Theme::get_attachment_image_url( $atts['image_left'], 'checklist-cta-container' );
 			}
 			
-			if( ! empty( $atts['image-right'] ) ) {
-				$atts['image-right'] = TBK_Theme::get_attachment_image_url( $atts['image-right'], 'checklist-cta-container' );
+			if( ! empty( $atts['image_right'] ) ) {
+				$atts['image_right'] = TBK_Theme::get_attachment_image_url( $atts['image_right'], 'checklist-cta-container' );
 			}
 			
 			return parent::content( $atts, $content, $view );
