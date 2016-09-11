@@ -72,7 +72,12 @@
 									<h5>April 12, 2016</h5>
 									<span>Aliquam Tincidunt Mauris</span>
 									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh urna</p>
-								</div>								
+								</div>
+								<div class="whats-happening">
+									<h5>April 12, 2016</h5>
+									<span>Aliquam Tincidunt Mauris</span>
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh urna</p>
+								</div>
 							</div>	
 						</div>						
 					</div>

@@ -77,7 +77,9 @@ class Theme_Enqueues extends Base_Factory {
 					'product-advantage',
 					'reln-way-content',
 					'checklist-cta-container',
-					'ckecklist-item',
+					'checklist-item',
+					'reln-cta-button',
+					'image-bar',
 				));
 
 				// pages

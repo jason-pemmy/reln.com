@@ -8,6 +8,7 @@
 		<div class="reln-way-logo"><img src="<?php echo $logo; ?>" alt=""/></div>
 		<div class="tagline-way">Way</div>
 	</div>
-	<div class="reln-way-underline"></div>
-	<div class="reln-way-copy"><?php echo $copy; ?></div>
+	<div class="reln-way-underline"></div>	
 </div>
+
+<div class="reln-way-copy"><?php echo $copy; ?></div>

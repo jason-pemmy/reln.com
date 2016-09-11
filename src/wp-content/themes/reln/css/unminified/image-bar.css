@@ -1,0 +1,33 @@
+.where-to-buy-header {
+  width: 100%;
+  margin-top: 75px;
+  color: #003d79;
+  font-weight: bold;
+  font-size: 25px;
+}
+.images-bar {
+  width: 100%;
+  margin-top: 35px;
+  margin-bottom: 150px;
+}
+@media screen and (min-width: 768px) {
+  .images-bar {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+.images-bar .images-bar-list {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+.images-bar .images-bar-list .image-item {
+  display: inline-block;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .images-bar .images-bar-list .image-item {
+    margin-right: 60px;
+  }
+}

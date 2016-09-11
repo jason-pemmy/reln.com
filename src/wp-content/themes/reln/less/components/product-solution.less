@@ -137,23 +137,26 @@
 			height: 355px;
 			border-style: none;
 			margin-left: 0;			
-			border-left: 50px;
-			border-left-style: solid;
-			border-left-color: @white;
-			border-right: 30px;
-			border-right-style: solid;
-			border-right-color: @white;
-			border-bottom: 10px;
-			border-bottom-style: solid;
-			border-bottom-color: @white;
+			border-left: 0;			
 			
 			@media @mq-xs-min {
-				width: 410px;	
+				width: 470px;
+				margin-left: -20px;
+				border-left: 0;
 			}
 			
 			@media @mq-sm-min {
 				width: 535px;	
-				margin-left: -50px;			
+				margin-left: -50px;
+				border-left: 50px;
+				border-left-style: solid;
+				border-left-color: @white;
+				border-right: 30px;
+				border-right-style: solid;
+				border-right-color: @white;
+				border-bottom: 10px;
+				border-bottom-style: solid;
+				border-bottom-color: @white;
 			}
 			
 			@media @mq-md-min {
@@ -170,7 +173,7 @@
 		&:hover {
 			background-color: @white;
 			
-			.product-solution-bg > .product-solution-fg > .product-solution-header {
+			.product-solution-bg > .product-solution-fg > .product-solution-info-link > .product-solution-header {
 				color: @black;
 			}
 		}

@@ -193,8 +193,29 @@ class TBK_Shortcodes extends Base_Factory {
 				),
 				array(
 					'type' => 'textfield',
-					'heading' => 'Item',
-					'param_name' => 'list_item',
+					'heading' => 'List Item',
+					'param_name' => 'list_item_copy',
+				),
+			),
+		));
+		
+		$this->register( 'reln-cta-button', array(
+			'show_settings_on_create' => true,
+			'params' => array(				
+				array(
+					'type' => 'textfield',
+					'heading' => 'Icon Class',
+					'param_name' => 'icon_class',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Link',
+					'param_name' => 'link',
+				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Text',
+					'param_name' => 'button_text',
 				),
 			),
 		));
@@ -477,7 +498,7 @@ class TBK_Shortcodes extends Base_Factory {
 	function checklist_item( $atts ) {
 		$atts = shortcode_atts( array(
 			'image' => null,
-			'list_item' => null,
+			'list_item_copy' => null,
 		), $atts );
 
 		if( ! empty( $atts['image'] ) ) {
@@ -486,6 +507,16 @@ class TBK_Shortcodes extends Base_Factory {
 
 		return TBK_Render::shortcode_view( 'checklist-item', $atts );
 		
+	}
+	
+	function reln_cta_button( $atts ) {
+		$atts = shortcode_atts( array(
+			'icon_class' => null,
+			'button_text' => null,
+			'link' => null,
+		), $atts );
+
+		return TBK_Render::shortcode_view( 'reln-cta-button', $atts );
 	}
 	
 	function product_solution( $atts ) {

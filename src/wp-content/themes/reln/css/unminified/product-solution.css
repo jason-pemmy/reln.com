@@ -132,25 +132,28 @@
   height: 355px;
   border-style: none;
   margin-left: 0;
-  border-left: 50px;
-  border-left-style: solid;
-  border-left-color: #fff;
-  border-right: 30px;
-  border-right-style: solid;
-  border-right-color: #fff;
-  border-bottom: 10px;
-  border-bottom-style: solid;
-  border-bottom-color: #fff;
+  border-left: 0;
 }
 @media screen and (min-width: 480px) {
   .product-solutions .product-solution .overlay {
-    width: 410px;
+    width: 470px;
+    margin-left: -20px;
+    border-left: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .product-solutions .product-solution .overlay {
     width: 535px;
     margin-left: -50px;
+    border-left: 50px;
+    border-left-style: solid;
+    border-left-color: #fff;
+    border-right: 30px;
+    border-right-style: solid;
+    border-right-color: #fff;
+    border-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
   }
 }
 @media screen and (min-width: 992px) {
@@ -168,7 +171,7 @@
 .product-solutions .product-solution:hover {
   background-color: #fff;
 }
-.product-solutions .product-solution:hover .product-solution-bg > .product-solution-fg > .product-solution-header {
+.product-solutions .product-solution:hover .product-solution-bg > .product-solution-fg > .product-solution-info-link > .product-solution-header {
   color: #000;
 }
 .product-solutions .product-solution:hover .overlay {

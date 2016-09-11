@@ -11,5 +11,5 @@
 		</div>
 	</div>
 </div>
-<div class="reln-way-heading"><?php echo tagline; ?></div>
-<div class="reln-way-button"><?php echo $button_text; ?></div>	
+<div class="reln-way-heading"><?php //echo tagline; ?></div>
+<div class="reln-way-button"><?php //echo $button_text; ?></div>	

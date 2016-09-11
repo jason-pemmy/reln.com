@@ -1,0 +1,35 @@
+@import '../utils/utils.less';
+
+.where-to-buy-header {
+	width: 100%;
+	margin-top: 75px;
+	color: @reln-blue;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.images-bar {
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 150px;
+	
+	@media @mq-sm-min {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+	
+	.images-bar-list {
+		text-align: center;
+		list-style-type: none;
+		padding: 0;
+		.image-item {
+			display: inline-block;
+			margin-right: 20px;
+			padding-bottom: 20px;
+			
+			@media @mq-sm-min {
+				margin-right: 60px;				
+			}
+		}
+	}
+}

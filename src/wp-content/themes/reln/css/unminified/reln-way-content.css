@@ -63,7 +63,7 @@
   margin-right: 5px;
   margin-top: -5px;
   vertical-align: super;
-  color: #077962;
+  color: #78b431;
   font-size: 18px;
   font-weight: bold;
 }
@@ -71,7 +71,7 @@
   float: left;
   margin-top: -14px;
   margin-left: 5px;
-  color: #077962;
+  color: #78b431;
   font-size: 35px;
   font-family: "Times New Roman", Georgia, Serif;
 }
@@ -88,29 +88,29 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.reln-way-content .reln-way-copy {
+.reln-way-copy {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .reln-way-content .reln-way-copy {
+  .reln-way-copy {
     width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
-  .reln-way-content .reln-way-copy {
+  .reln-way-copy {
     width: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .reln-way-content .reln-way-copy {
+  .reln-way-copy {
     width: 50%;
   }
 }
 @media screen and (min-width: 1400px) {
-  .reln-way-content .reln-way-copy {
+  .reln-way-copy {
     width: 38%;
   }
 }
