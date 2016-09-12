@@ -5,6 +5,14 @@
 	width: 100%;
 	text-align: center;
 	
+	@media @mq-md-min {
+		margin-top: -107px;
+	}
+	
+	@media @mq-lg-min {
+		margin-top: -122px;
+	}
+	
 	.product-feature {
 		display: inline-block;
 		width: 295px;
@@ -36,7 +44,7 @@
 				margin: 0 auto;
 				margin-top: -56px;
 				margin-left: 18px;
-				background-color: #fff;
+				background-color: @white;
 				z-index: 2;
 				
 				@media @mq-xs-min {
@@ -74,10 +82,10 @@
 					margin-top: 10px;
 					text-align: center;
 					color: @reln-blue;
-					font-size: 13px;				
+					font-size: 13px;
 				}
 			}
-		}	
+		}
 		
 		.overlay {
 			position: relative;
@@ -86,6 +94,15 @@
 			width: 310px;
 			height: 465px;
 			margin-left: -8px;
+			border-top: 18px;
+			border-top-style: solid;
+			border-top-color: @white;
+			border-right: 18px;
+			border-right-style: solid;
+			border-right-color: @white;
+			border-left: 18px;
+			border-left-style: solid;
+			border-left-color: @white;
 			
 			@media @mq-xs-min {
 				top: -200px;
@@ -94,7 +111,7 @@
 		}
 		
 		&:hover .overlay {
-			display: block;			
+			display: block;
 			-webkit-box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);
 			-moz-box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);
 			box-shadow: 5px 5px 40px 0px rgba(189,185,189,0.66);

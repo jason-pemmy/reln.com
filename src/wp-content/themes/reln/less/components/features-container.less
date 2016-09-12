@@ -5,7 +5,7 @@
 	height: 235px;
 	margin: 0 auto;
 	padding-top: 30px;
-	background-color: #fbfafa;
+	background-color: @background-beige;
 	
 	@media @mq-xs-min {
 		width: 80%;
@@ -34,6 +34,14 @@
 			text-transform: uppercase;
 			
 			@media @mq-xs-min {
+				font-size: 25px;
+			}
+			
+			@media @mq-sm-min {
+				font-size: 30px;
+			}
+			
+			@media @mq-md-min {
 				font-size: 40px;
 			}
 		}

@@ -1,6 +1,6 @@
 <div class="product-advantage <?php echo $classes; ?>" >	
 	<div class="product-advantage-image">
-		<img class="" src="<?php echo $image; ?>" alt=""/>
+		<img class="" src="<?php echo $image; ?>" alt="<?php echo $heading; ?>"/>
 	</div>
 	<div class="product-advantage-copy">
 		<div class="product-advantage-heading"><?php echo $heading; ?></div>

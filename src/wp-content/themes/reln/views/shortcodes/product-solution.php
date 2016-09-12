@@ -2,7 +2,7 @@
 	<div class="product-solution-bg">		
 		<div class="product-solution-fg">
 			<div class="product-solution-img">
-				<img class="" src="<?php echo $image; ?>" alt=""/>
+				<img class="" src="<?php echo $image; ?>" alt="<?php echo $heading; ?>"/>
 			</div>
 			<div class="product-solution-info-link">
 				<div class="product-solution-header"><?php echo $heading; ?></div>

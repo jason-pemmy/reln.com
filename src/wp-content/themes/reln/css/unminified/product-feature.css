@@ -3,6 +3,16 @@
   width: 100%;
   text-align: center;
 }
+@media screen and (min-width: 992px) {
+  .product-features {
+    margin-top: -107px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-features {
+    margin-top: -122px;
+  }
+}
 .product-features .product-feature {
   display: inline-block;
   width: 295px;
@@ -81,6 +91,15 @@
   width: 310px;
   height: 465px;
   margin-left: -8px;
+  border-top: 18px;
+  border-top-style: solid;
+  border-top-color: #fff;
+  border-right: 18px;
+  border-right-style: solid;
+  border-right-color: #fff;
+  border-left: 18px;
+  border-left-style: solid;
+  border-left-color: #fff;
 }
 @media screen and (min-width: 480px) {
   .product-features .product-feature .overlay {

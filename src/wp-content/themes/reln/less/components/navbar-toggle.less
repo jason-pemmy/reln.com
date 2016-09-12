@@ -33,7 +33,7 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		overflow: hidden;
+		overflow-x: hidden;
 		transition: none;
 		background-color: @reln-blue;		
 		
@@ -97,7 +97,19 @@
 		
 		li {
 			height: 50px;
-			text-align: center;
+			text-align: left;			
+			
+			@media @mq-xs-min {
+				margin-left: 10%;
+			}
+			
+			@media @mq-sm-min {
+				margin-left: 20%;
+			}
+			
+			@media @mq-md-min {
+				margin-left: 0;
+			}
 			
 			a {
 				display: inline-block;
