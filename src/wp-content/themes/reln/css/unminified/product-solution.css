@@ -5,7 +5,7 @@
 .product-solutions .product-solution.odd-color {
   width: 310px;
   height: 350px;
-  background-color: #fbfafa;
+  background-color: #fff;
 }
 @media screen and (min-width: 480px) {
   .product-solutions .product-solution.odd-color {
@@ -15,6 +15,11 @@
 @media screen and (min-width: 768px) {
   .product-solutions .product-solution.odd-color {
     width: 465px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .product-solutions .product-solution.odd-color {
+    background-color: #fbfafa;
   }
 }
 .product-solutions .product-solution {

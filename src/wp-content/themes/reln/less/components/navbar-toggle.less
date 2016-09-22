@@ -92,34 +92,40 @@
 	
 	.reln-nav {
 		margin-top: 20px;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
 		
 		li {
 			height: 50px;
-			text-align: left;			
+			text-align: left;	
+			//width: 100%;
+			//cursor: pointer;
 			
-			@media @mq-xs-min {
-				margin-left: 10%;
+			/*@media @mq-xs-min {
+				//margin-left: 5px;
 			}
 			
 			@media @mq-sm-min {
-				margin-left: 20%;
+				//margin-left: 20%;
 			}
 			
 			@media @mq-md-min {
 				margin-left: 0;
-			}
+			}*/
 			
 			a {
 				display: inline-block;
+				width: 100%;
+				height: 50px;
 				padding-bottom: 0;
+				background-color: @reln-blue;				
 				color: @white;
 				white-space: nowrap;
 				font-size: 19px;
-				text-transform: uppercase;
+				text-transform: uppercase;				
 				
 				@media @mq-md-min {
+					background-color: @white;
 					font-size: 14px;
 					padding-right: 9px;
 					padding-left: 9px;
@@ -138,25 +144,25 @@
 				}
 				
 				&:hover {
-					color: @grey-light;
-					border-bottom-color: @grey-light;
-					border-bottom-width: 4px;
+					background-color: @reln-hover;
 					border-bottom-style: solid;
+					border-bottom-width: 5px;
 					
 					@media @mq-md-min {
+						background-color: @white;
 						color: @reln-blue;
 						border-bottom-color: @reln-blue;
 					}
 				}
 				
 				@media @mq-md-min {
-					color: #0081bc;
+					color: @reln-hover;
 					padding-bottom: 13px;
-				}
+				}				
 			}
 		}
 		@media @mq-md-min {
-			margin-top: 35px;
+			margin-top: 37px;
 		}
 	}
 	
@@ -207,7 +213,7 @@
 					padding-bottom: 0;
 					
 					&:hover {
-						color: @grey-light;
+						color: @reln-hover;
 					}
 					
 					@media @mq-md-min {
