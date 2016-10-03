@@ -80,6 +80,7 @@ define( 'WPLANG', '' );
  */
 define( 'WP_MEMORY_LIMIT', '96M' );
 define( 'WP_ALLOW_MULTISITE', false );
+define( 'AUTOSAVE_INTERVAL', 160 );
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -27,7 +27,6 @@
   width: 310px;
   height: 350px;
   margin-top: -10px;
-  cursor: pointer;
   background-color: #fff;
 }
 @media screen and (min-width: 480px) {
@@ -114,6 +113,7 @@
   padding-top: 15px;
   color: #0081bc;
   font-size: 15px;
+  cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   .product-solutions .product-solution .product-solution-bg .product-solution-fg .product-solution-info-link .product-solution-link {

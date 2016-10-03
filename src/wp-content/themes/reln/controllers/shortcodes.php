@@ -76,6 +76,11 @@ class TBK_Shortcodes extends Base_Factory {
 					'heading' => 'Classes',
 					'param_name' => 'classes',
 				),
+				array(
+					'type' => 'textfield',
+					'heading' => 'Link',
+					'param_name' => 'link',
+				),
 			),
 		));
 		
@@ -461,6 +466,7 @@ class TBK_Shortcodes extends Base_Factory {
 			'heading' => null,
 			'copy' => null,
 			'classes' => null,
+			'link' => null,
 		), $atts );
 
 		if( ! empty( $atts['bg_image'] ) ) {

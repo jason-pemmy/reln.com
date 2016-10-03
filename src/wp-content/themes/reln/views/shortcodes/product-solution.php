@@ -1,4 +1,4 @@
-<div class="product-solution <?php echo $classes; ?>" >
+<div class="product-solution <?php echo $classes; ?>" >	
 	<div class="product-solution-bg">		
 		<div class="product-solution-fg">
 			<div class="product-solution-img">
@@ -13,5 +13,5 @@
 			</div>			
 		</div>
 	</div>
-	<div class="overlay"></div>
+	<a href="<?php echo $link; ?>"><div class="overlay"></div></a>
 </div>
